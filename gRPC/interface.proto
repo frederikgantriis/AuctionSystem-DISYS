@@ -9,7 +9,7 @@ service Auction {
 }
 
 message BidRequest {
-    int32 id = 1;
+    string user = 1;
     int32 bid = 2;
 }
 
@@ -28,5 +28,6 @@ message ResultRequest {
 
 message ResultReply {
     int32 highestBid = 1;
-    int32 timeLeft = 2;
+    string user = 2;
+    int32 timeLeft = 3;
 }
