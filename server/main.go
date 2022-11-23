@@ -6,6 +6,7 @@ import (
 	"log"
 	"net"
 	"os"
+	"time"
 
 	auction "github.com/frederikgantriis/AuctionSystem-DISYS/gRPC"
 	"google.golang.org/grpc"
@@ -29,7 +30,7 @@ func main() {
 	grpcServer := grpc.NewServer()
 	auction.RegisterAuctionServer(grpcServer, &Server{
 		highestBid:        0,
-		timeLeft:          100,
+		timeLeft:          -1,
 		currentWinnerUser: "",
 	})
 
@@ -39,6 +40,19 @@ func main() {
 }
 
 func (s *Server) bid(ctx context.Context, req *auction.BidRequest) (*auction.BidReply, error) {
+	if s.timeLeft == -1 {
+		s.timeLeft = 60
+
+		go func() {
+			for s.timeLeft > 0 {
+				s.timeLeft--
+				time.Sleep(time.Second)
+			}
+		}()
+
+		log.Printf("Auction started")
+	}
+
 	if (req.Bid > s.highestBid) && (s.timeLeft > 0) {
 		s.highestBid = req.Bid
 		s.currentWinnerUser = req.User
@@ -49,7 +63,7 @@ func (s *Server) bid(ctx context.Context, req *auction.BidRequest) (*auction.Bid
 }
 
 func (s *Server) result(ctx context.Context, resReq *auction.ResultRequest) (*auction.ResultReply, error) {
-	return nil, nil
+	return &auction.ResultReply{User: s.currentWinnerUser, HighestBid: s.highestBid}, nil
 }
 
 func openLogFile(path string) (*os.File, error) {
