@@ -7,6 +7,7 @@ import (
 	"io"
 	"log"
 	"os"
+	"strconv"
 	"strings"
 
 	auction "github.com/frederikgantriis/AuctionSystem-DISYS/gRPC"
@@ -46,7 +47,8 @@ func main() {
 		command[0] = strings.ToLower(command[0])
 
 		if command[0] == "bid" {
-			bid := &auction.BidRequest{Id: username, Bid: int32(fmt.Atoi(command[1]))}
+			bidAmount, _ := strconv.Atoi(command[1])
+			bid := &auction.BidRequest{User: username, Bid: int32(bidAmount)}
 			for _, client := range clients {
 				client.Bid(ctx, bid)
 			}
