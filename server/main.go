@@ -10,10 +10,6 @@ import (
 	"google.golang.org/grpc"
 )
 
-type Server struct {
-	auction.UnimplementedAuctionServer
-}
-
 func main() {
 	file, _ := openLogFile("./serverlog.log")
 
@@ -29,7 +25,11 @@ func main() {
 	listen, _ := net.Listen("tcp", "localhost:300"+os.Args[1])
 
 	grpcServer := grpc.NewServer()
-	auction.RegisterAuctionServer(grpcServer, &Server{})
+	auction.RegisterAuctionServer(grpcServer, &Server{
+		highestBid:        0,
+		timeLeft:          100,
+		currentWinnerUser: "",
+	})
 
 	log.Printf("server listening at %v", listen.Addr())
 
@@ -37,7 +37,13 @@ func main() {
 }
 
 func (s *Server) bid(ctx context.Context, req *auction.BidRequest) (*auction.BidReply, error) {
-	return nil, nil
+	if (req.Bid > s.highestBid) && (s.timeLeft > 0) {
+		s.highestBid = req.Bid
+		s.currentWinnerUser = req.User
+		return &auction.BidReply{Outcome: auction.Outcomes(SUCCESS)}, nil
+	} else {
+		return &auction.BidReply{Outcome: auction.Outcomes(FAIL)}, nil
+	}
 }
 
 func (s *Server) result(ctx context.Context, resReq *auction.ResultRequest) (*auction.ResultReply, error) {
@@ -50,6 +56,13 @@ func openLogFile(path string) (*os.File, error) {
 		return nil, err
 	}
 	return logFile, nil
+}
+
+type Server struct {
+	auction.UnimplementedAuctionServer
+	highestBid        int32
+	currentWinnerUser string
+	timeLeft          int32
 }
 
 type Outcomes int32
