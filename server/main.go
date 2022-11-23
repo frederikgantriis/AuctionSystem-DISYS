@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"io"
 	"log"
 	"net"
 	"os"
@@ -15,9 +16,10 @@ type Server struct {
 }
 
 func main() {
-	file, _ := openLogFile("./serverlog.log")
+	file, _ := openLogFile("./server/serverlog.log")
 
-	log.SetOutput(file)
+	mw := io.MultiWriter(os.Stdout, file)
+	log.SetOutput(mw)
 	log.SetFlags(2 | 3)
 
 	log.Println("Hello World!")

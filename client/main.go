@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"context"
 	"fmt"
+	"io"
 	"log"
 	"os"
 	"strings"
@@ -13,10 +14,14 @@ import (
 )
 
 func main() {
-	file, _ := openLogFile("./serverlog.log")
+	username := os.Args[1]
+	file, _ := openLogFile("./client/clientlog.log")
 
-	log.SetOutput(file)
+	mw := io.MultiWriter(os.Stdout, file)
+	log.SetOutput(mw)
 	log.SetFlags(2 | 3)
+
+	log.Println("Hello World")
 
 	clients := make([]auction.AuctionClient, 3)
 
@@ -41,15 +46,14 @@ func main() {
 		command[0] = strings.ToLower(command[0])
 
 		if command[0] == "bid" {
+			bid := &auction.BidRequest{Id: username, Bid: int32(fmt.Atoi(command[1]))}
 			for _, client := range clients {
-				log.Println(client)
+				client.Bid(ctx, bid)
 			}
 		} else if command[0] == "result" {
-
-		}
-
-		if err != nil {
-			log.Panicln(err)
+			for _, client := range clients {
+				client.Result(ctx, &auction.ResultRequest{})
+			}
 		}
 
 	}
