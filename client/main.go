@@ -49,8 +49,20 @@ func main() {
 		if command[0] == "bid" {
 			bidAmount, _ := strconv.Atoi(command[1])
 			bid := &auction.BidRequest{User: username, Bid: int32(bidAmount)}
-			for _, client := range clients {
-				client.Bid(ctx, bid)
+			for id, client := range clients {
+				res, err := client.Bid(ctx, bid)
+				if err != nil {
+					log.Printf("ERROR: %v", err)
+					return
+				}
+
+				log.Printf("user %v: %v", username, res.GetOutcome())
+
+				if res.GetOutcome() == auction.Outcomes_SUCCESS {
+					log.Printf("user %v made a succesfull bid at server %v, for amount: %v", username, id, bidAmount)
+				} else if res.GetOutcome() == auction.Outcomes_FAIL {
+					log.Printf("user %v: bid was either too low or auction has ended", username)
+				}
 			}
 		} else if command[0] == "result" {
 			for _, client := range clients {
