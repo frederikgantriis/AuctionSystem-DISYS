@@ -49,27 +49,72 @@ func main() {
 		if command[0] == "bid" {
 			bidAmount, _ := strconv.Atoi(command[1])
 			bid := &auction.BidRequest{User: username, Bid: int32(bidAmount)}
-			for id, client := range clients {
+
+			w := 0
+			var reply *auction.BidReply
+			for _, client := range clients {
 				res, err := client.Bid(ctx, bid)
 				if err != nil {
 					log.Printf("ERROR: %v", err)
-					return
+					continue
 				}
+				w++
 
 				log.Printf("user %v: %v", username, res.GetOutcome())
 
-				if res.GetOutcome() == auction.Outcomes_SUCCESS {
-					log.Printf("user %v made a succesfull bid at server %v, for amount: %v", username, id, bidAmount)
-				} else if res.GetOutcome() == auction.Outcomes_FAIL {
-					log.Printf("user %v: bid was either too low or auction has ended", username)
+				if reply == nil || (reply.GetOutcome() != res.GetOutcome() && reply.GetOutcome() == auction.Outcomes_SUCCESS) {
+					reply = res
 				}
 			}
+
+			if w >= 2 {
+				if reply.GetOutcome() == auction.Outcomes_SUCCESS {
+					log.Printf("user %v made a succesfull bid, for amount: %v", username, bidAmount)
+				} else if reply.GetOutcome() == auction.Outcomes_FAIL {
+					log.Printf("user %v: bid was either too low or auction has ended", username)
+				}
+			} else {
+				log.Printf("user %v: Call successful server writes and delete write (not implemented)", username)
+			}
 		} else if command[0] == "result" {
+			r := 0
+			var reply *auction.ResultReply
 			for _, client := range clients {
-				client.Result(ctx, &auction.ResultRequest{})
+				res, err := client.Result(ctx, &auction.ResultRequest{})
+				if err != nil {
+					log.Printf("ERROR: %v", err)
+					continue
+				}
+				r++
+
+				// Take the first result
+				if reply == nil {
+					reply = res
+					continue
+				}
+
+				// Update highestBid
+				if res.GetHighestBid() > reply.GetHighestBid() {
+					reply.HighestBid = res.GetHighestBid()
+					reply.User = res.GetUser()
+				}
+
+				// Update timeleft
+				if res.GetTimeLeft() < reply.GetTimeLeft() {
+					reply.TimeLeft = reply.GetTimeLeft()
+				}
+			}
+
+			if r >= 2 {
+				if reply.GetTimeLeft() > 0 {
+					log.Printf("user %v: Current highest bid: %v by %v\n The auction ends in: %v seconds", username, reply.GetHighestBid(), reply.GetUser(), reply.GetTimeLeft())
+				} else {
+					log.Printf("user %v: The auction has ended. The winner was %v with the bid: %v", username, reply.GetUser(), reply.GetHighestBid())
+				}
+			} else {
+				log.Printf("user %v: Didn't receive enough answers to get a usefull result", username)
 			}
 		}
-
 	}
 }
 

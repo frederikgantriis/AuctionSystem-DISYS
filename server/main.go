@@ -77,7 +77,7 @@ func (s *Server) Bid(ctx context.Context, req *auction.BidRequest) (*auction.Bid
 }
 
 func (s *Server) Result(ctx context.Context, resReq *auction.ResultRequest) (*auction.ResultReply, error) {
-	return &auction.ResultReply{User: s.currentWinnerUser, HighestBid: s.highestBid}, nil
+	return &auction.ResultReply{User: s.currentWinnerUser, HighestBid: s.highestBid, TimeLeft: s.timeLeft}, nil
 }
 
 func openLogFile(path string) (*os.File, error) {
@@ -99,7 +99,6 @@ type Server struct {
 type Outcomes int32
 
 const (
-	FAIL      Outcomes = 0
-	SUCCESS   Outcomes = 1
-	EXCEPTION Outcomes = 2
+	FAIL    Outcomes = 0
+	SUCCESS Outcomes = 1
 )
