@@ -150,3 +150,57 @@
 2022/11/24 20:56:42 user silas made a succesfull bid at server 1, for amount: 89
 2022/11/24 20:56:42 user silas: SUCCESS
 2022/11/24 20:56:42 user silas made a succesfull bid at server 2, for amount: 89
+2022/11/25 09:09:48 Hello World
+2022/11/25 09:10:02 user Marcus: SUCCESS
+2022/11/25 09:10:02 user Marcus: SUCCESS
+2022/11/25 09:10:02 user Marcus: SUCCESS
+2022/11/25 09:10:02 user Marcus made a succesfull bid at server Marcus, for amount: 3000
+2022/11/25 09:11:31 user Marcus: Current highest bid: 3000 by Marcus
+ The auction ends in: 0 seconds
+2022/11/25 09:11:40 user Marcus: Current highest bid: 3000 by Marcus
+ The auction ends in: 0 seconds
+2022/11/25 09:14:40 Hello World
+2022/11/25 09:14:44 user Marcus: SUCCESS
+2022/11/25 09:14:44 user Marcus: SUCCESS
+2022/11/25 09:14:44 user Marcus: SUCCESS
+2022/11/25 09:14:44 user Marcus made a succesfull bid, for amount: 3000
+2022/11/25 09:14:48 user Marcus: FAIL
+2022/11/25 09:14:48 user Marcus: FAIL
+2022/11/25 09:14:48 user Marcus: FAIL
+2022/11/25 09:14:48 user Marcus: bid was either too low or auction has ended
+2022/11/25 09:14:51 user Marcus: Current highest bid: 3000 by Marcus
+ The auction ends in: 53 seconds
+2022/11/25 09:14:59 user Marcus: SUCCESS
+2022/11/25 09:14:59 user Marcus: SUCCESS
+2022/11/25 09:14:59 user Marcus: SUCCESS
+2022/11/25 09:14:59 user Marcus made a succesfull bid, for amount: 4000
+2022/11/25 09:15:02 user Marcus: Current highest bid: 4000 by Marcus
+ The auction ends in: 41 seconds
+2022/11/25 09:15:29 user Marcus: SUCCESS
+2022/11/25 09:15:29 user Marcus: SUCCESS
+2022/11/25 09:15:29 user Marcus: SUCCESS
+2022/11/25 09:15:29 user Marcus made a succesfull bid, for amount: 213124
+2022/11/25 09:15:40 user Marcus: Current highest bid: 213124 by Marcus
+ The auction ends in: 4 seconds
+2022/11/25 09:15:45 user Marcus: The auction has ended. The winner was Marcus with the bid: 213124
+2022/11/25 09:15:51 user Marcus: FAIL
+2022/11/25 09:15:51 user Marcus: FAIL
+2022/11/25 09:15:51 user Marcus: FAIL
+2022/11/25 09:15:51 user Marcus: bid was either too low or auction has ended
+2022/11/25 09:17:25 Hello World
+2022/11/25 09:17:27 user Marcus: SUCCESS
+2022/11/25 09:17:27 user Marcus: SUCCESS
+2022/11/25 09:17:27 user Marcus: SUCCESS
+2022/11/25 09:17:27 user Marcus made a succesfull bid, for amount: 3000
+2022/11/25 09:17:36 user Marcus: FAIL
+2022/11/25 09:17:36 user Marcus: FAIL
+2022/11/25 09:17:36 ERROR: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp :3002: connect: connection refused"
+2022/11/25 09:17:36 user Marcus: bid was either too low or auction has ended
+2022/11/25 09:17:57 user Marcus: SUCCESS
+2022/11/25 09:17:57 user Marcus: SUCCESS
+2022/11/25 09:17:57 ERROR: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp :3002: connect: connection refused"
+2022/11/25 09:17:57 user Marcus made a succesfull bid, for amount: 4000
+2022/11/25 09:18:13 user Marcus: SUCCESS
+2022/11/25 09:18:13 ERROR: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp :3001: connect: connection refused"
+2022/11/25 09:18:13 ERROR: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp :3002: connect: connection refused"
+2022/11/25 09:18:13 user Marcus: Call successful server writes and delete write (not implemented)

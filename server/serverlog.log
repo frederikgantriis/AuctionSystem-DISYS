@@ -136,3 +136,102 @@
 2022/11/24 20:56:42 server 0 recieved a bid from silas
 2022/11/24 20:56:42 server 1 recieved a bid from silas
 2022/11/24 20:56:42 server 2 recieved a bid from silas
+2022/11/25 09:08:55 Hello World!
+2022/11/25 09:08:55 server listening at 127.0.0.1:3000
+2022/11/25 09:09:07 Hello World!
+2022/11/25 09:09:07 server listening at 127.0.0.1:3001
+2022/11/25 09:09:32 Hello World!
+2022/11/25 09:09:32 server listening at 127.0.0.1:3002
+2022/11/25 09:10:02 server 0 recieved a bid from Marcus
+2022/11/25 09:10:02 Server 0 started a new auction
+2022/11/25 09:10:02 server 1 recieved a bid from Marcus
+2022/11/25 09:10:02 Server 1 started a new auction
+2022/11/25 09:10:02 server 2 recieved a bid from Marcus
+2022/11/25 09:10:02 Server 2 started a new auction
+2022/11/25 09:10:11 time left of auction at server 0: 50 seconds
+2022/11/25 09:10:11 time left of auction at server 1: 50 seconds
+2022/11/25 09:10:11 time left of auction at server 2: 50 seconds
+2022/11/25 09:10:21 time left of auction at server 0: 40 seconds
+2022/11/25 09:10:21 time left of auction at server 1: 40 seconds
+2022/11/25 09:10:21 time left of auction at server 2: 40 seconds
+2022/11/25 09:10:31 time left of auction at server 0: 30 seconds
+2022/11/25 09:10:31 time left of auction at server 1: 30 seconds
+2022/11/25 09:10:31 time left of auction at server 2: 30 seconds
+2022/11/25 09:10:41 time left of auction at server 0: 20 seconds
+2022/11/25 09:10:41 time left of auction at server 1: 20 seconds
+2022/11/25 09:10:41 time left of auction at server 2: 20 seconds
+2022/11/25 09:10:51 time left of auction at server 0: 10 seconds
+2022/11/25 09:10:51 time left of auction at server 1: 10 seconds
+2022/11/25 09:10:51 time left of auction at server 2: 10 seconds
+2022/11/25 09:11:01 time left of auction at server 0: 0 seconds
+2022/11/25 09:11:01 time left of auction at server 1: 0 seconds
+2022/11/25 09:11:01 time left of auction at server 2: 0 seconds
+2022/11/25 09:14:27 Hello World!
+2022/11/25 09:14:27 server listening at 127.0.0.1:3000
+2022/11/25 09:14:31 Hello World!
+2022/11/25 09:14:31 server listening at 127.0.0.1:3001
+2022/11/25 09:14:33 Hello World!
+2022/11/25 09:14:33 server listening at 127.0.0.1:3002
+2022/11/25 09:14:44 server 0 recieved a bid from Marcus
+2022/11/25 09:14:44 Server 0 started a new auction
+2022/11/25 09:14:44 server 1 recieved a bid from Marcus
+2022/11/25 09:14:44 Server 1 started a new auction
+2022/11/25 09:14:44 server 2 recieved a bid from Marcus
+2022/11/25 09:14:44 Server 2 started a new auction
+2022/11/25 09:14:48 server 0 recieved a bid from Marcus
+2022/11/25 09:14:48 server 1 recieved a bid from Marcus
+2022/11/25 09:14:48 server 2 recieved a bid from Marcus
+2022/11/25 09:14:53 time left of auction at server 0: 50 seconds
+2022/11/25 09:14:53 time left of auction at server 1: 50 seconds
+2022/11/25 09:14:53 time left of auction at server 2: 50 seconds
+2022/11/25 09:14:59 server 0 recieved a bid from Marcus
+2022/11/25 09:14:59 server 1 recieved a bid from Marcus
+2022/11/25 09:14:59 server 2 recieved a bid from Marcus
+2022/11/25 09:15:03 time left of auction at server 0: 40 seconds
+2022/11/25 09:15:03 time left of auction at server 1: 40 seconds
+2022/11/25 09:15:03 time left of auction at server 2: 40 seconds
+2022/11/25 09:15:13 time left of auction at server 0: 30 seconds
+2022/11/25 09:15:13 time left of auction at server 1: 30 seconds
+2022/11/25 09:15:13 time left of auction at server 2: 30 seconds
+2022/11/25 09:15:23 time left of auction at server 0: 20 seconds
+2022/11/25 09:15:23 time left of auction at server 1: 20 seconds
+2022/11/25 09:15:23 time left of auction at server 2: 20 seconds
+2022/11/25 09:15:29 server 0 recieved a bid from Marcus
+2022/11/25 09:15:29 server 1 recieved a bid from Marcus
+2022/11/25 09:15:29 server 2 recieved a bid from Marcus
+2022/11/25 09:15:33 time left of auction at server 0: 10 seconds
+2022/11/25 09:15:33 time left of auction at server 1: 10 seconds
+2022/11/25 09:15:33 time left of auction at server 2: 10 seconds
+2022/11/25 09:15:43 time left of auction at server 0: 0 seconds
+2022/11/25 09:15:43 time left of auction at server 1: 0 seconds
+2022/11/25 09:15:43 time left of auction at server 2: 0 seconds
+2022/11/25 09:15:51 server 0 recieved a bid from Marcus
+2022/11/25 09:15:51 server 1 recieved a bid from Marcus
+2022/11/25 09:15:51 server 2 recieved a bid from Marcus
+2022/11/25 09:17:15 Hello World!
+2022/11/25 09:17:15 server listening at 127.0.0.1:3000
+2022/11/25 09:17:18 Hello World!
+2022/11/25 09:17:18 server listening at 127.0.0.1:3001
+2022/11/25 09:17:20 Hello World!
+2022/11/25 09:17:20 server listening at 127.0.0.1:3002
+2022/11/25 09:17:27 server 0 recieved a bid from Marcus
+2022/11/25 09:17:27 Server 0 started a new auction
+2022/11/25 09:17:27 server 1 recieved a bid from Marcus
+2022/11/25 09:17:27 Server 1 started a new auction
+2022/11/25 09:17:27 server 2 recieved a bid from Marcus
+2022/11/25 09:17:27 Server 2 started a new auction
+2022/11/25 09:17:36 time left of auction at server 0: 50 seconds
+2022/11/25 09:17:36 time left of auction at server 1: 50 seconds
+2022/11/25 09:17:36 server 0 recieved a bid from Marcus
+2022/11/25 09:17:36 server 1 recieved a bid from Marcus
+2022/11/25 09:17:46 time left of auction at server 0: 40 seconds
+2022/11/25 09:17:46 time left of auction at server 1: 40 seconds
+2022/11/25 09:17:56 time left of auction at server 0: 30 seconds
+2022/11/25 09:17:56 time left of auction at server 1: 30 seconds
+2022/11/25 09:17:57 server 0 recieved a bid from Marcus
+2022/11/25 09:17:57 server 1 recieved a bid from Marcus
+2022/11/25 09:18:06 time left of auction at server 0: 20 seconds
+2022/11/25 09:18:06 time left of auction at server 1: 20 seconds
+2022/11/25 09:18:13 server 0 recieved a bid from Marcus
+2022/11/25 09:18:16 time left of auction at server 0: 10 seconds
+2022/11/25 09:18:26 time left of auction at server 0: 0 seconds

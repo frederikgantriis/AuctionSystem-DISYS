@@ -6,6 +6,7 @@ option go_package = "https://github.com/frederikgantriis/AuctionSystem-DISYS;auc
 service Auction {
     rpc bid (BidRequest) returns (BidReply) {}
     rpc result (ResultRequest) returns (ResultReply) {}
+    rpc reset (ResetRequest) returns (ResetReply) {}
 }
 
 message BidRequest {
@@ -30,4 +31,10 @@ message ResultReply {
     int32 highestBid = 1;
     string user = 2;
     int32 timeLeft = 3;
+}
+
+message ResetRequest {
+}
+
+message ResetReply {
 }
