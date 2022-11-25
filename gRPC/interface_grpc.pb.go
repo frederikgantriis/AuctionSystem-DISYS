@@ -24,6 +24,7 @@ const _ = grpc.SupportPackageIsVersion7
 type AuctionClient interface {
 	Bid(ctx context.Context, in *BidRequest, opts ...grpc.CallOption) (*BidReply, error)
 	Result(ctx context.Context, in *ResultRequest, opts ...grpc.CallOption) (*ResultReply, error)
+	Reset(ctx context.Context, in *ResetRequest, opts ...grpc.CallOption) (*ResetReply, error)
 }
 
 type auctionClient struct {
@@ -52,12 +53,22 @@ func (c *auctionClient) Result(ctx context.Context, in *ResultRequest, opts ...g
 	return out, nil
 }
 
+func (c *auctionClient) Reset(ctx context.Context, in *ResetRequest, opts ...grpc.CallOption) (*ResetReply, error) {
+	out := new(ResetReply)
+	err := c.cc.Invoke(ctx, "/auction.Auction/reset", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // AuctionServer is the server API for Auction service.
 // All implementations must embed UnimplementedAuctionServer
 // for forward compatibility
 type AuctionServer interface {
 	Bid(context.Context, *BidRequest) (*BidReply, error)
 	Result(context.Context, *ResultRequest) (*ResultReply, error)
+	Reset(context.Context, *ResetRequest) (*ResetReply, error)
 	mustEmbedUnimplementedAuctionServer()
 }
 
@@ -70,6 +81,9 @@ func (UnimplementedAuctionServer) Bid(context.Context, *BidRequest) (*BidReply, 
 }
 func (UnimplementedAuctionServer) Result(context.Context, *ResultRequest) (*ResultReply, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Result not implemented")
+}
+func (UnimplementedAuctionServer) Reset(context.Context, *ResetRequest) (*ResetReply, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Reset not implemented")
 }
 func (UnimplementedAuctionServer) mustEmbedUnimplementedAuctionServer() {}
 
@@ -120,6 +134,24 @@ func _Auction_Result_Handler(srv interface{}, ctx context.Context, dec func(inte
 	return interceptor(ctx, in, info, handler)
 }
 
+func _Auction_Reset_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ResetRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuctionServer).Reset(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/auction.Auction/reset",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuctionServer).Reset(ctx, req.(*ResetRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // Auction_ServiceDesc is the grpc.ServiceDesc for Auction service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -134,6 +166,10 @@ var Auction_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "result",
 			Handler:    _Auction_Result_Handler,
+		},
+		{
+			MethodName: "reset",
+			Handler:    _Auction_Reset_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
