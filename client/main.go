@@ -12,29 +12,29 @@ import (
 
 	auction "github.com/frederikgantriis/AuctionSystem-DISYS/gRPC"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/credentials/insecure"
 )
 
 func main() {
 	username := os.Args[1]
+
 	file, _ := openLogFile("./client/clientlog.log")
 
 	mw := io.MultiWriter(os.Stdout, file)
 	log.SetOutput(mw)
 	log.SetFlags(2 | 3)
 
-	log.Println("Hello World")
-
-	clients := make([]auction.AuctionClient, 3)
+	servers := make([]auction.AuctionClient, 3)
 
 	for i := 0; i < 3; i++ {
 		port := int32(3000) + int32(i)
 
 		fmt.Printf("Trying to dial: %v\n", port)
-		conn, err := grpc.Dial(fmt.Sprintf(":%v", port), grpc.WithInsecure(), grpc.WithBlock())
+		conn, err := grpc.Dial(fmt.Sprintf(":%v", port), grpc.WithTransportCredentials(insecure.NewCredentials()), grpc.WithBlock())
 		if err != nil {
 			log.Fatalf("Could not connect: %s", err)
 		}
-		clients[i] = auction.NewAuctionClient(conn)
+		servers[i] = auction.NewAuctionClient(conn)
 		defer conn.Close()
 	}
 
@@ -52,10 +52,10 @@ func main() {
 
 			w := 0
 			var reply *auction.BidReply
-			for _, client := range clients {
-				res, err := client.Bid(ctx, bid)
+			for _, server := range servers {
+				res, err := server.Bid(ctx, bid)
 				if err != nil {
-					log.Printf("ERROR: %v", err)
+					log.Printf("user %v: ERROR - %v", username, err)
 					continue
 				}
 				w++
@@ -69,7 +69,7 @@ func main() {
 
 			if w >= 2 {
 				if reply.GetOutcome() == auction.Outcomes_SUCCESS {
-					log.Printf("user %v made a succesfull bid, for amount: %v", username, bidAmount)
+					log.Printf("user %v: made a succesfull bid, for amount: %v", username, bidAmount)
 				} else if reply.GetOutcome() == auction.Outcomes_FAIL {
 					log.Printf("user %v: bid was either too low or auction has ended", username)
 				}
@@ -79,10 +79,10 @@ func main() {
 		} else if command[0] == "result" {
 			r := 0
 			var reply *auction.ResultReply
-			for _, client := range clients {
-				res, err := client.Result(ctx, &auction.ResultRequest{})
+			for _, server := range servers {
+				res, err := server.Result(ctx, &auction.ResultRequest{})
 				if err != nil {
-					log.Printf("ERROR: %v", err)
+					log.Printf("user %v: ERROR - %v", username, err)
 					continue
 				}
 				r++
@@ -113,6 +113,14 @@ func main() {
 				}
 			} else {
 				log.Printf("user %v: Didn't receive enough answers to get a usefull result", username)
+			}
+		} else if command[0] == "reset" {
+			for _, server := range servers {
+				_, err := server.Reset(ctx, &auction.ResetRequest{})
+				if err != nil {
+					log.Printf("user %v: ERROR - %v", username, err)
+					continue
+				}
 			}
 		}
 	}

@@ -20,8 +20,6 @@ func main() {
 	log.SetOutput(mw)
 	log.SetFlags(2 | 3)
 
-	log.Println("Hello World!")
-
 	if len(os.Args) != 2 {
 		log.Printf("Please input a number to run the server on")
 	}
@@ -47,7 +45,7 @@ func main() {
 
 func (s *Server) Bid(ctx context.Context, req *auction.BidRequest) (*auction.BidReply, error) {
 	// if a bid is made when timeLeft is -1, a new auction starts
-	log.Printf("server %v recieved a bid from %v", s.id, req.User)
+	log.Printf("server %v: recieved a bid from %v. Amount: %v", s.id, req.GetUser(), req.GetBid())
 	if s.timeLeft == -1 {
 		s.highestBid = 0
 		s.currentWinnerUser = ""
@@ -64,7 +62,7 @@ func (s *Server) Bid(ctx context.Context, req *auction.BidRequest) (*auction.Bid
 			}
 		}()
 
-		log.Printf("Server %v started a new auction", s.id)
+		log.Printf("server %v: started a new auction", s.id)
 	}
 
 	if (req.Bid > s.highestBid) && (s.timeLeft > 0) {
@@ -78,6 +76,13 @@ func (s *Server) Bid(ctx context.Context, req *auction.BidRequest) (*auction.Bid
 
 func (s *Server) Result(ctx context.Context, resReq *auction.ResultRequest) (*auction.ResultReply, error) {
 	return &auction.ResultReply{User: s.currentWinnerUser, HighestBid: s.highestBid, TimeLeft: s.timeLeft}, nil
+}
+
+func (s *Server) Reset(ctx context.Context, resReq *auction.ResetRequest) (*auction.ResetReply, error) {
+	// timeLeft == -1 means that a new auction will be started when a bid is made
+	s.timeLeft = -1
+	log.Printf("server %v: resetted the auction", s.id)
+	return &auction.ResetReply{}, nil
 }
 
 func openLogFile(path string) (*os.File, error) {

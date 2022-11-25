@@ -12,6 +12,8 @@ go run server/main.go 1
 go run server/main.go 2
 ```
 
+in seperate terminals.
+
 ### Clients
 
 To run a client:

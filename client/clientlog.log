@@ -1,206 +1,51 @@
-2022/11/23 12:54:11 Hello World
-2022/11/24 20:30:46 Hello World
-2022/11/24 20:31:17 Hello World
-2022/11/24 20:31:21 user silas: <nil>
-2022/11/24 20:31:21 user silas made a succesfull bid at server 0, for amount: 100
-2022/11/24 20:31:21 user silas: <nil>
-2022/11/24 20:31:21 user silas made a succesfull bid at server 1, for amount: 100
-2022/11/24 20:31:21 user silas: <nil>
-2022/11/24 20:31:21 user silas made a succesfull bid at server 2, for amount: 100
-2022/11/24 20:31:39 Hello World
-2022/11/24 20:32:04 Hello World
-2022/11/24 20:32:35 Hello World
-2022/11/24 20:32:51 Hello World
-2022/11/24 20:32:54 user silas: <nil>
-2022/11/24 20:32:54 user silas made a succesfull bid at server 0, for amount: 2
-2022/11/24 20:32:54 user silas: <nil>
-2022/11/24 20:32:54 user silas made a succesfull bid at server 1, for amount: 2
-2022/11/24 20:32:54 user silas: <nil>
-2022/11/24 20:32:54 user silas made a succesfull bid at server 2, for amount: 2
-2022/11/24 20:32:58 user silas: <nil>
-2022/11/24 20:32:58 user silas made a succesfull bid at server 0, for amount: 1
-2022/11/24 20:32:58 user silas: <nil>
-2022/11/24 20:32:58 user silas made a succesfull bid at server 1, for amount: 1
-2022/11/24 20:32:58 user silas: <nil>
-2022/11/24 20:32:58 user silas made a succesfull bid at server 2, for amount: 1
-2022/11/24 20:33:08 user silas: <nil>
-2022/11/24 20:33:08 user silas made a succesfull bid at server 0, for amount: 100
-2022/11/24 20:33:08 user silas: <nil>
-2022/11/24 20:33:08 user silas made a succesfull bid at server 1, for amount: 100
-2022/11/24 20:33:08 user silas: <nil>
-2022/11/24 20:33:08 user silas made a succesfull bid at server 2, for amount: 100
-2022/11/24 20:34:13 Hello World
-2022/11/24 20:35:07 Hello World
-2022/11/24 20:35:41 Hello World
-2022/11/24 20:35:44 user silas: FAIL
-2022/11/24 20:35:44 user silas made a succesfull bid at server 0, for amount: 2
-2022/11/24 20:35:44 user silas: FAIL
-2022/11/24 20:35:44 user silas made a succesfull bid at server 1, for amount: 2
-2022/11/24 20:35:44 user silas: FAIL
-2022/11/24 20:35:44 user silas made a succesfull bid at server 2, for amount: 2
-2022/11/24 20:35:54 user silas: FAIL
-2022/11/24 20:35:54 user silas made a succesfull bid at server 0, for amount: 5
-2022/11/24 20:35:54 user silas: FAIL
-2022/11/24 20:35:54 user silas made a succesfull bid at server 1, for amount: 5
-2022/11/24 20:35:54 user silas: FAIL
-2022/11/24 20:35:54 user silas made a succesfull bid at server 2, for amount: 5
-2022/11/24 20:45:49 Hello World
-2022/11/24 20:47:53 Hello World
-2022/11/24 20:47:55 ERROR: <nil>
-2022/11/24 20:47:55 ERROR: <nil>
-2022/11/24 20:47:55 ERROR: <nil>
-2022/11/24 20:48:39 Hello World
-2022/11/24 20:48:42 user silas: SUCCESS
-2022/11/24 20:48:42 user silas made a succesfull bid at server 0, for amount: 100
-2022/11/24 20:48:42 user silas: SUCCESS
-2022/11/24 20:48:42 user silas made a succesfull bid at server 1, for amount: 100
-2022/11/24 20:48:42 user silas: SUCCESS
-2022/11/24 20:48:42 user silas made a succesfull bid at server 2, for amount: 100
-2022/11/24 20:49:41 Hello World
-2022/11/24 20:49:43 user silas: SUCCESS
-2022/11/24 20:49:43 user silas made a succesfull bid at server 0, for amount: 1
-2022/11/24 20:49:43 user silas: SUCCESS
-2022/11/24 20:49:43 user silas made a succesfull bid at server 1, for amount: 1
-2022/11/24 20:49:43 user silas: SUCCESS
-2022/11/24 20:49:43 user silas made a succesfull bid at server 2, for amount: 1
-2022/11/24 20:49:45 user silas: SUCCESS
-2022/11/24 20:49:45 user silas made a succesfull bid at server 0, for amount: 2
-2022/11/24 20:49:45 user silas: SUCCESS
-2022/11/24 20:49:45 user silas made a succesfull bid at server 1, for amount: 2
-2022/11/24 20:49:45 user silas: SUCCESS
-2022/11/24 20:49:45 user silas made a succesfull bid at server 2, for amount: 2
-2022/11/24 20:49:47 user silas: FAIL
-2022/11/24 20:49:47 user silas made a succesfull bid at server 0, for amount: 1
-2022/11/24 20:49:47 user silas: FAIL
-2022/11/24 20:49:47 user silas made a succesfull bid at server 1, for amount: 1
-2022/11/24 20:49:47 user silas: FAIL
-2022/11/24 20:49:47 user silas made a succesfull bid at server 2, for amount: 1
-2022/11/24 20:49:51 user silas: SUCCESS
-2022/11/24 20:49:51 user silas made a succesfull bid at server 0, for amount: 100
-2022/11/24 20:49:51 user silas: SUCCESS
-2022/11/24 20:49:51 user silas made a succesfull bid at server 1, for amount: 100
-2022/11/24 20:49:51 user silas: SUCCESS
-2022/11/24 20:49:51 user silas made a succesfull bid at server 2, for amount: 100
-2022/11/24 20:49:53 user silas: FAIL
-2022/11/24 20:49:53 user silas made a succesfull bid at server 0, for amount: 0
-2022/11/24 20:49:53 user silas: FAIL
-2022/11/24 20:49:53 user silas made a succesfull bid at server 1, for amount: 0
-2022/11/24 20:49:53 user silas: FAIL
-2022/11/24 20:49:53 user silas made a succesfull bid at server 2, for amount: 0
-2022/11/24 20:49:56 user silas: FAIL
-2022/11/24 20:49:56 user silas made a succesfull bid at server 0, for amount: -100
-2022/11/24 20:49:56 user silas: FAIL
-2022/11/24 20:49:56 user silas made a succesfull bid at server 1, for amount: -100
-2022/11/24 20:49:56 user silas: FAIL
-2022/11/24 20:49:56 user silas made a succesfull bid at server 2, for amount: -100
-2022/11/24 20:49:59 user silas: FAIL
-2022/11/24 20:49:59 user silas made a succesfull bid at server 0, for amount: 100
-2022/11/24 20:49:59 user silas: FAIL
-2022/11/24 20:49:59 user silas made a succesfull bid at server 1, for amount: 100
-2022/11/24 20:49:59 user silas: FAIL
-2022/11/24 20:49:59 user silas made a succesfull bid at server 2, for amount: 100
-2022/11/24 20:52:30 Hello World
-2022/11/24 20:52:33 user silas: SUCCESS
-2022/11/24 20:52:33 user silas made a succesfull bid at server 0, for amount: 10
-2022/11/24 20:52:33 user silas: SUCCESS
-2022/11/24 20:52:33 user silas made a succesfull bid at server 1, for amount: 10
-2022/11/24 20:52:33 user silas: SUCCESS
-2022/11/24 20:52:33 user silas made a succesfull bid at server 2, for amount: 10
-2022/11/24 20:52:51 Hello World
-2022/11/24 20:52:54 user test: FAIL
-2022/11/24 20:52:54 user test: bid was either too low or auction has ended
-2022/11/24 20:52:54 user test: FAIL
-2022/11/24 20:52:54 user test: bid was either too low or auction has ended
-2022/11/24 20:52:54 user test: FAIL
-2022/11/24 20:52:54 user test: bid was either too low or auction has ended
-2022/11/24 20:52:58 user test: SUCCESS
-2022/11/24 20:52:58 user test made a succesfull bid at server 0, for amount: 11
-2022/11/24 20:52:58 user test: SUCCESS
-2022/11/24 20:52:58 user test made a succesfull bid at server 1, for amount: 11
-2022/11/24 20:52:58 user test: SUCCESS
-2022/11/24 20:52:58 user test made a succesfull bid at server 2, for amount: 11
-2022/11/24 20:53:07 user silas: SUCCESS
-2022/11/24 20:53:07 user silas made a succesfull bid at server 0, for amount: 199
-2022/11/24 20:53:07 user silas: SUCCESS
-2022/11/24 20:53:07 user silas made a succesfull bid at server 1, for amount: 199
-2022/11/24 20:53:07 user silas: SUCCESS
-2022/11/24 20:53:07 user silas made a succesfull bid at server 2, for amount: 199
-2022/11/24 20:56:16 Hello World
-2022/11/24 20:56:19 user silas: SUCCESS
-2022/11/24 20:56:19 user silas made a succesfull bid at server 0, for amount: 10
-2022/11/24 20:56:19 user silas: SUCCESS
-2022/11/24 20:56:19 user silas made a succesfull bid at server 1, for amount: 10
-2022/11/24 20:56:19 user silas: SUCCESS
-2022/11/24 20:56:19 user silas made a succesfull bid at server 2, for amount: 10
-2022/11/24 20:56:36 user silas: SUCCESS
-2022/11/24 20:56:36 user silas made a succesfull bid at server 0, for amount: 23
-2022/11/24 20:56:36 user silas: SUCCESS
-2022/11/24 20:56:36 user silas made a succesfull bid at server 1, for amount: 23
-2022/11/24 20:56:36 user silas: SUCCESS
-2022/11/24 20:56:36 user silas made a succesfull bid at server 2, for amount: 23
-2022/11/24 20:56:39 user silas: FAIL
-2022/11/24 20:56:39 user silas: bid was either too low or auction has ended
-2022/11/24 20:56:39 user silas: FAIL
-2022/11/24 20:56:39 user silas: bid was either too low or auction has ended
-2022/11/24 20:56:39 user silas: FAIL
-2022/11/24 20:56:39 user silas: bid was either too low or auction has ended
-2022/11/24 20:56:42 user silas: SUCCESS
-2022/11/24 20:56:42 user silas made a succesfull bid at server 0, for amount: 89
-2022/11/24 20:56:42 user silas: SUCCESS
-2022/11/24 20:56:42 user silas made a succesfull bid at server 1, for amount: 89
-2022/11/24 20:56:42 user silas: SUCCESS
-2022/11/24 20:56:42 user silas made a succesfull bid at server 2, for amount: 89
-2022/11/25 09:09:48 Hello World
-2022/11/25 09:10:02 user Marcus: SUCCESS
-2022/11/25 09:10:02 user Marcus: SUCCESS
-2022/11/25 09:10:02 user Marcus: SUCCESS
-2022/11/25 09:10:02 user Marcus made a succesfull bid at server Marcus, for amount: 3000
-2022/11/25 09:11:31 user Marcus: Current highest bid: 3000 by Marcus
- The auction ends in: 0 seconds
-2022/11/25 09:11:40 user Marcus: Current highest bid: 3000 by Marcus
- The auction ends in: 0 seconds
-2022/11/25 09:14:40 Hello World
-2022/11/25 09:14:44 user Marcus: SUCCESS
-2022/11/25 09:14:44 user Marcus: SUCCESS
-2022/11/25 09:14:44 user Marcus: SUCCESS
-2022/11/25 09:14:44 user Marcus made a succesfull bid, for amount: 3000
-2022/11/25 09:14:48 user Marcus: FAIL
-2022/11/25 09:14:48 user Marcus: FAIL
-2022/11/25 09:14:48 user Marcus: FAIL
-2022/11/25 09:14:48 user Marcus: bid was either too low or auction has ended
-2022/11/25 09:14:51 user Marcus: Current highest bid: 3000 by Marcus
- The auction ends in: 53 seconds
-2022/11/25 09:14:59 user Marcus: SUCCESS
-2022/11/25 09:14:59 user Marcus: SUCCESS
-2022/11/25 09:14:59 user Marcus: SUCCESS
-2022/11/25 09:14:59 user Marcus made a succesfull bid, for amount: 4000
-2022/11/25 09:15:02 user Marcus: Current highest bid: 4000 by Marcus
- The auction ends in: 41 seconds
-2022/11/25 09:15:29 user Marcus: SUCCESS
-2022/11/25 09:15:29 user Marcus: SUCCESS
-2022/11/25 09:15:29 user Marcus: SUCCESS
-2022/11/25 09:15:29 user Marcus made a succesfull bid, for amount: 213124
-2022/11/25 09:15:40 user Marcus: Current highest bid: 213124 by Marcus
+2022/11/25 10:00:24 user Marcus: SUCCESS
+2022/11/25 10:00:24 user Marcus: SUCCESS
+2022/11/25 10:00:24 user Marcus: SUCCESS
+2022/11/25 10:00:24 user Marcus: made a succesfull bid, for amount: 100
+2022/11/25 10:00:27 user Silas: SUCCESS
+2022/11/25 10:00:27 user Silas: SUCCESS
+2022/11/25 10:00:27 user Silas: SUCCESS
+2022/11/25 10:00:27 user Silas: made a succesfull bid, for amount: 200
+2022/11/25 10:00:31 user Marcus: FAIL
+2022/11/25 10:00:31 user Marcus: FAIL
+2022/11/25 10:00:31 user Marcus: FAIL
+2022/11/25 10:00:31 user Marcus: bid was either too low or auction has ended
+2022/11/25 10:00:35 user Marcus: SUCCESS
+2022/11/25 10:00:35 user Marcus: SUCCESS
+2022/11/25 10:00:35 user Marcus: SUCCESS
+2022/11/25 10:00:35 user Marcus: made a succesfull bid, for amount: 300
+2022/11/25 10:00:39 user Silas: SUCCESS
+2022/11/25 10:00:39 user Silas: SUCCESS
+2022/11/25 10:00:39 user Silas: SUCCESS
+2022/11/25 10:00:39 user Silas: made a succesfull bid, for amount: 450
+2022/11/25 10:00:42 user Marcus: FAIL
+2022/11/25 10:00:42 user Marcus: FAIL
+2022/11/25 10:00:42 user Marcus: FAIL
+2022/11/25 10:00:42 user Marcus: bid was either too low or auction has ended
+2022/11/25 10:00:46 user Silas: FAIL
+2022/11/25 10:00:46 user Silas: FAIL
+2022/11/25 10:00:46 user Silas: FAIL
+2022/11/25 10:00:46 user Silas: bid was either too low or auction has ended
+2022/11/25 10:01:10 user Marcus: SUCCESS
+2022/11/25 10:01:10 user Marcus: ERROR - rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp :3001: connect: connection refused"
+2022/11/25 10:01:10 user Marcus: SUCCESS
+2022/11/25 10:01:10 user Marcus: made a succesfull bid, for amount: 500
+2022/11/25 10:01:17 user Silas: ERROR - rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp :3001: connect: connection refused"
+2022/11/25 10:01:17 user Silas: Current highest bid: 500 by Marcus
+ The auction ends in: 6 seconds
+2022/11/25 10:01:20 user Marcus: ERROR - rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp :3001: connect: connection refused"
+2022/11/25 10:01:20 user Marcus: Current highest bid: 500 by Marcus
  The auction ends in: 4 seconds
-2022/11/25 09:15:45 user Marcus: The auction has ended. The winner was Marcus with the bid: 213124
-2022/11/25 09:15:51 user Marcus: FAIL
-2022/11/25 09:15:51 user Marcus: FAIL
-2022/11/25 09:15:51 user Marcus: FAIL
-2022/11/25 09:15:51 user Marcus: bid was either too low or auction has ended
-2022/11/25 09:17:25 Hello World
-2022/11/25 09:17:27 user Marcus: SUCCESS
-2022/11/25 09:17:27 user Marcus: SUCCESS
-2022/11/25 09:17:27 user Marcus: SUCCESS
-2022/11/25 09:17:27 user Marcus made a succesfull bid, for amount: 3000
-2022/11/25 09:17:36 user Marcus: FAIL
-2022/11/25 09:17:36 user Marcus: FAIL
-2022/11/25 09:17:36 ERROR: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp :3002: connect: connection refused"
-2022/11/25 09:17:36 user Marcus: bid was either too low or auction has ended
-2022/11/25 09:17:57 user Marcus: SUCCESS
-2022/11/25 09:17:57 user Marcus: SUCCESS
-2022/11/25 09:17:57 ERROR: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp :3002: connect: connection refused"
-2022/11/25 09:17:57 user Marcus made a succesfull bid, for amount: 4000
-2022/11/25 09:18:13 user Marcus: SUCCESS
-2022/11/25 09:18:13 ERROR: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp :3001: connect: connection refused"
-2022/11/25 09:18:13 ERROR: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp :3002: connect: connection refused"
-2022/11/25 09:18:13 user Marcus: Call successful server writes and delete write (not implemented)
+2022/11/25 10:01:30 user Marcus: ERROR - rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp :3001: connect: connection refused"
+2022/11/25 10:01:30 user Marcus: The auction has ended. The winner was Marcus with the bid: 500
+2022/11/25 10:01:32 user Silas: ERROR - rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp :3001: connect: connection refused"
+2022/11/25 10:01:33 user Silas: The auction has ended. The winner was Marcus with the bid: 500
+2022/11/25 10:01:35 user Marcus: ERROR - rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp :3001: connect: connection refused"
+2022/11/25 10:01:42 user Marcus: SUCCESS
+2022/11/25 10:01:42 user Marcus: ERROR - rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp :3001: connect: connection refused"
+2022/11/25 10:01:42 user Marcus: SUCCESS
+2022/11/25 10:01:42 user Marcus: made a succesfull bid, for amount: 100
+2022/11/25 10:01:46 user Silas: SUCCESS
+2022/11/25 10:01:46 user Silas: ERROR - rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp :3001: connect: connection refused"
+2022/11/25 10:01:46 user Silas: SUCCESS
+2022/11/25 10:01:46 user Silas: made a succesfull bid, for amount: 200
