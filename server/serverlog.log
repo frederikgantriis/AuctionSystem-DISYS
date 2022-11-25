@@ -8,3 +8,131 @@
 2022/11/23 13:16:22 Please input a number to run the server on
 2022/11/23 13:16:25 Hello World!
 2022/11/23 13:16:25 server listening at 127.0.0.1:3001
+2022/11/24 20:11:23 Hello World!
+2022/11/24 20:11:23 server listening at 127.0.0.1:3001
+2022/11/24 20:30:18 Hello World!
+2022/11/24 20:30:18 server listening at 127.0.0.1:3000
+2022/11/24 20:30:27 Hello World!
+2022/11/24 20:30:27 server listening at 127.0.0.1:3001
+2022/11/24 20:30:34 Hello World!
+2022/11/24 20:30:34 server listening at 127.0.0.1:3002
+2022/11/24 20:32:17 Hello World!
+2022/11/24 20:32:17 server listening at 127.0.0.1:3000
+2022/11/24 20:32:26 Hello World!
+2022/11/24 20:32:26 server listening at 127.0.0.1:3001
+2022/11/24 20:32:30 Hello World!
+2022/11/24 20:32:30 server listening at 127.0.0.1:3002
+2022/11/24 20:35:30 Hello World!
+2022/11/24 20:35:30 server listening at 127.0.0.1:3000
+2022/11/24 20:35:32 Hello World!
+2022/11/24 20:35:32 server listening at 127.0.0.1:3001
+2022/11/24 20:35:34 Hello World!
+2022/11/24 20:35:34 server listening at 127.0.0.1:3002
+2022/11/24 20:45:43 Hello World!
+2022/11/24 20:45:43 server listening at 127.0.0.1:3000
+2022/11/24 20:45:44 Hello World!
+2022/11/24 20:45:44 server listening at 127.0.0.1:3001
+2022/11/24 20:45:46 Hello World!
+2022/11/24 20:45:46 server listening at 127.0.0.1:3002
+2022/11/24 20:45:53 server 0 recieved a bid from 'silas'
+2022/11/24 20:45:53 Server 0 started a new auction
+2022/11/24 20:45:53 server 1 recieved a bid from 'silas'
+2022/11/24 20:45:53 Server 1 started a new auction
+2022/11/24 20:45:53 server 2 recieved a bid from 'silas'
+2022/11/24 20:45:53 Server 2 started a new auction
+2022/11/24 20:46:11 server 0 recieved a bid from 'silas'
+2022/11/24 20:46:11 server 1 recieved a bid from 'silas'
+2022/11/24 20:46:11 server 2 recieved a bid from 'silas'
+2022/11/24 20:47:46 Hello World!
+2022/11/24 20:47:46 server listening at 127.0.0.1:3000
+2022/11/24 20:47:48 Hello World!
+2022/11/24 20:47:48 server listening at 127.0.0.1:3001
+2022/11/24 20:47:50 Hello World!
+2022/11/24 20:47:50 server listening at 127.0.0.1:3002
+2022/11/24 20:47:55 server 0 recieved a bid from silas
+2022/11/24 20:47:55 Server 0 started a new auction
+2022/11/24 20:47:55 server 1 recieved a bid from silas
+2022/11/24 20:47:55 Server 1 started a new auction
+2022/11/24 20:47:55 server 2 recieved a bid from silas
+2022/11/24 20:47:55 Server 2 started a new auction
+2022/11/24 20:48:42 server 0 recieved a bid from silas
+2022/11/24 20:48:42 server 1 recieved a bid from silas
+2022/11/24 20:48:42 server 2 recieved a bid from silas
+2022/11/24 20:49:35 Hello World!
+2022/11/24 20:49:35 server listening at 127.0.0.1:3000
+2022/11/24 20:49:37 Hello World!
+2022/11/24 20:49:37 server listening at 127.0.0.1:3001
+2022/11/24 20:49:38 Hello World!
+2022/11/24 20:49:38 server listening at 127.0.0.1:3002
+2022/11/24 20:49:43 server 0 recieved a bid from silas
+2022/11/24 20:49:43 Server 0 started a new auction
+2022/11/24 20:49:43 server 1 recieved a bid from silas
+2022/11/24 20:49:43 Server 1 started a new auction
+2022/11/24 20:49:43 server 2 recieved a bid from silas
+2022/11/24 20:49:43 Server 2 started a new auction
+2022/11/24 20:49:45 server 0 recieved a bid from silas
+2022/11/24 20:49:45 server 1 recieved a bid from silas
+2022/11/24 20:49:45 server 2 recieved a bid from silas
+2022/11/24 20:49:47 server 0 recieved a bid from silas
+2022/11/24 20:49:47 server 1 recieved a bid from silas
+2022/11/24 20:49:47 server 2 recieved a bid from silas
+2022/11/24 20:49:51 server 0 recieved a bid from silas
+2022/11/24 20:49:51 server 1 recieved a bid from silas
+2022/11/24 20:49:51 server 2 recieved a bid from silas
+2022/11/24 20:49:53 server 0 recieved a bid from silas
+2022/11/24 20:49:53 server 1 recieved a bid from silas
+2022/11/24 20:49:53 server 2 recieved a bid from silas
+2022/11/24 20:49:56 server 0 recieved a bid from silas
+2022/11/24 20:49:56 server 1 recieved a bid from silas
+2022/11/24 20:49:56 server 2 recieved a bid from silas
+2022/11/24 20:49:59 server 0 recieved a bid from silas
+2022/11/24 20:49:59 server 1 recieved a bid from silas
+2022/11/24 20:49:59 server 2 recieved a bid from silas
+2022/11/24 20:52:25 Hello World!
+2022/11/24 20:52:25 server listening at 127.0.0.1:3000
+2022/11/24 20:52:26 Hello World!
+2022/11/24 20:52:26 server listening at 127.0.0.1:3001
+2022/11/24 20:52:28 Hello World!
+2022/11/24 20:52:28 server listening at 127.0.0.1:3002
+2022/11/24 20:52:33 server 0 recieved a bid from silas
+2022/11/24 20:52:33 Server 0 started a new auction
+2022/11/24 20:52:33 server 1 recieved a bid from silas
+2022/11/24 20:52:33 Server 1 started a new auction
+2022/11/24 20:52:33 server 2 recieved a bid from silas
+2022/11/24 20:52:33 Server 2 started a new auction
+2022/11/24 20:52:54 server 0 recieved a bid from test
+2022/11/24 20:52:54 server 1 recieved a bid from test
+2022/11/24 20:52:54 server 2 recieved a bid from test
+2022/11/24 20:52:58 server 0 recieved a bid from test
+2022/11/24 20:52:58 server 1 recieved a bid from test
+2022/11/24 20:52:58 server 2 recieved a bid from test
+2022/11/24 20:53:07 server 0 recieved a bid from silas
+2022/11/24 20:53:07 server 1 recieved a bid from silas
+2022/11/24 20:53:07 server 2 recieved a bid from silas
+2022/11/24 20:55:01 Hello World!
+2022/11/24 20:55:01 server listening at 127.0.0.1:3000
+2022/11/24 20:55:14 Hello World!
+2022/11/24 20:55:14 server listening at 127.0.0.1:3001
+2022/11/24 20:55:59 Hello World!
+2022/11/24 20:55:59 server listening at 127.0.0.1:3002
+2022/11/24 20:56:19 server 0 recieved a bid from silas
+2022/11/24 20:56:19 Server 0 started a new auction
+2022/11/24 20:56:19 server 1 recieved a bid from silas
+2022/11/24 20:56:19 Server 1 started a new auction
+2022/11/24 20:56:19 server 2 recieved a bid from silas
+2022/11/24 20:56:19 Server 2 started a new auction
+2022/11/24 20:56:28 time left of auction at server 0: 50 seconds
+2022/11/24 20:56:28 time left of auction at server 1: 50 seconds
+2022/11/24 20:56:28 time left of auction at server 2: 50 seconds
+2022/11/24 20:56:36 server 0 recieved a bid from silas
+2022/11/24 20:56:36 server 1 recieved a bid from silas
+2022/11/24 20:56:36 server 2 recieved a bid from silas
+2022/11/24 20:56:38 time left of auction at server 2: 40 seconds
+2022/11/24 20:56:38 time left of auction at server 1: 40 seconds
+2022/11/24 20:56:38 time left of auction at server 0: 40 seconds
+2022/11/24 20:56:39 server 0 recieved a bid from silas
+2022/11/24 20:56:39 server 1 recieved a bid from silas
+2022/11/24 20:56:39 server 2 recieved a bid from silas
+2022/11/24 20:56:42 server 0 recieved a bid from silas
+2022/11/24 20:56:42 server 1 recieved a bid from silas
+2022/11/24 20:56:42 server 2 recieved a bid from silas
