@@ -4,9 +4,16 @@ package auction;
 option go_package = "https://github.com/frederikgantriis/AuctionSystem-DISYS;auction";
 
 service Auction {
-    rpc bid (BidRequest) returns (BidReply) {}
-    rpc result (ResultRequest) returns (ResultReply) {}
-    rpc reset (ResetRequest) returns (ResetReply) {}
+    rpc bid (BidRequest) returns (ClientReply) {}
+    rpc result (Request) returns (ClientReply) {}
+    rpc reset (Request) returns (ClientReply) {}
+
+    rpc serverBid (BidRequest) returns (OutcomeReply) {}
+    rpc serverResult (Request) returns (ResultReply) {}
+    rpc ServerReset (Request) returns (OutcomeReply) {}
+}
+
+message Request {
 }
 
 message BidRequest {
@@ -14,17 +21,12 @@ message BidRequest {
     int32 bid = 2;
 }
 
-message BidReply {
+message ClientReply {
+    string message = 1;
+}
+
+message OutcomeReply {
     outcomes outcome = 1;
-}
-
-enum outcomes {
-    FAIL = 0;
-    SUCCESS = 1;
-    EXCEPTION = 2;
-}
-
-message ResultRequest {
 }
 
 message ResultReply {
@@ -33,8 +35,7 @@ message ResultReply {
     int32 timeLeft = 3;
 }
 
-message ResetRequest {
-}
-
-message ResetReply {
+enum outcomes {
+    FAIL = 0;
+    SUCCESS = 1;
 }
