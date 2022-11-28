@@ -12,7 +12,7 @@ go run server/main.go 1
 go run server/main.go 2
 ```
 
-in seperate terminals.
+each in a seperate terminal.
 
 ### Clients
 
