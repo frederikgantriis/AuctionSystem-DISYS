@@ -22,9 +22,12 @@ const _ = grpc.SupportPackageIsVersion7
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type AuctionClient interface {
-	Bid(ctx context.Context, in *BidRequest, opts ...grpc.CallOption) (*BidReply, error)
-	Result(ctx context.Context, in *ResultRequest, opts ...grpc.CallOption) (*ResultReply, error)
-	Reset(ctx context.Context, in *ResetRequest, opts ...grpc.CallOption) (*ResetReply, error)
+	Bid(ctx context.Context, in *BidRequest, opts ...grpc.CallOption) (*ClientReply, error)
+	Result(ctx context.Context, in *Request, opts ...grpc.CallOption) (*ClientReply, error)
+	Reset(ctx context.Context, in *Request, opts ...grpc.CallOption) (*ClientReply, error)
+	ServerBid(ctx context.Context, in *BidRequest, opts ...grpc.CallOption) (*OutcomeReply, error)
+	ServerResult(ctx context.Context, in *Request, opts ...grpc.CallOption) (*ResultReply, error)
+	ServerReset(ctx context.Context, in *Request, opts ...grpc.CallOption) (*OutcomeReply, error)
 }
 
 type auctionClient struct {
@@ -35,8 +38,8 @@ func NewAuctionClient(cc grpc.ClientConnInterface) AuctionClient {
 	return &auctionClient{cc}
 }
 
-func (c *auctionClient) Bid(ctx context.Context, in *BidRequest, opts ...grpc.CallOption) (*BidReply, error) {
-	out := new(BidReply)
+func (c *auctionClient) Bid(ctx context.Context, in *BidRequest, opts ...grpc.CallOption) (*ClientReply, error) {
+	out := new(ClientReply)
 	err := c.cc.Invoke(ctx, "/auction.Auction/bid", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -44,8 +47,8 @@ func (c *auctionClient) Bid(ctx context.Context, in *BidRequest, opts ...grpc.Ca
 	return out, nil
 }
 
-func (c *auctionClient) Result(ctx context.Context, in *ResultRequest, opts ...grpc.CallOption) (*ResultReply, error) {
-	out := new(ResultReply)
+func (c *auctionClient) Result(ctx context.Context, in *Request, opts ...grpc.CallOption) (*ClientReply, error) {
+	out := new(ClientReply)
 	err := c.cc.Invoke(ctx, "/auction.Auction/result", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -53,9 +56,36 @@ func (c *auctionClient) Result(ctx context.Context, in *ResultRequest, opts ...g
 	return out, nil
 }
 
-func (c *auctionClient) Reset(ctx context.Context, in *ResetRequest, opts ...grpc.CallOption) (*ResetReply, error) {
-	out := new(ResetReply)
+func (c *auctionClient) Reset(ctx context.Context, in *Request, opts ...grpc.CallOption) (*ClientReply, error) {
+	out := new(ClientReply)
 	err := c.cc.Invoke(ctx, "/auction.Auction/reset", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *auctionClient) ServerBid(ctx context.Context, in *BidRequest, opts ...grpc.CallOption) (*OutcomeReply, error) {
+	out := new(OutcomeReply)
+	err := c.cc.Invoke(ctx, "/auction.Auction/serverBid", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *auctionClient) ServerResult(ctx context.Context, in *Request, opts ...grpc.CallOption) (*ResultReply, error) {
+	out := new(ResultReply)
+	err := c.cc.Invoke(ctx, "/auction.Auction/serverResult", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *auctionClient) ServerReset(ctx context.Context, in *Request, opts ...grpc.CallOption) (*OutcomeReply, error) {
+	out := new(OutcomeReply)
+	err := c.cc.Invoke(ctx, "/auction.Auction/ServerReset", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -66,9 +96,12 @@ func (c *auctionClient) Reset(ctx context.Context, in *ResetRequest, opts ...grp
 // All implementations must embed UnimplementedAuctionServer
 // for forward compatibility
 type AuctionServer interface {
-	Bid(context.Context, *BidRequest) (*BidReply, error)
-	Result(context.Context, *ResultRequest) (*ResultReply, error)
-	Reset(context.Context, *ResetRequest) (*ResetReply, error)
+	Bid(context.Context, *BidRequest) (*ClientReply, error)
+	Result(context.Context, *Request) (*ClientReply, error)
+	Reset(context.Context, *Request) (*ClientReply, error)
+	ServerBid(context.Context, *BidRequest) (*OutcomeReply, error)
+	ServerResult(context.Context, *Request) (*ResultReply, error)
+	ServerReset(context.Context, *Request) (*OutcomeReply, error)
 	mustEmbedUnimplementedAuctionServer()
 }
 
@@ -76,14 +109,23 @@ type AuctionServer interface {
 type UnimplementedAuctionServer struct {
 }
 
-func (UnimplementedAuctionServer) Bid(context.Context, *BidRequest) (*BidReply, error) {
+func (UnimplementedAuctionServer) Bid(context.Context, *BidRequest) (*ClientReply, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Bid not implemented")
 }
-func (UnimplementedAuctionServer) Result(context.Context, *ResultRequest) (*ResultReply, error) {
+func (UnimplementedAuctionServer) Result(context.Context, *Request) (*ClientReply, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Result not implemented")
 }
-func (UnimplementedAuctionServer) Reset(context.Context, *ResetRequest) (*ResetReply, error) {
+func (UnimplementedAuctionServer) Reset(context.Context, *Request) (*ClientReply, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Reset not implemented")
+}
+func (UnimplementedAuctionServer) ServerBid(context.Context, *BidRequest) (*OutcomeReply, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ServerBid not implemented")
+}
+func (UnimplementedAuctionServer) ServerResult(context.Context, *Request) (*ResultReply, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ServerResult not implemented")
+}
+func (UnimplementedAuctionServer) ServerReset(context.Context, *Request) (*OutcomeReply, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ServerReset not implemented")
 }
 func (UnimplementedAuctionServer) mustEmbedUnimplementedAuctionServer() {}
 
@@ -117,7 +159,7 @@ func _Auction_Bid_Handler(srv interface{}, ctx context.Context, dec func(interfa
 }
 
 func _Auction_Result_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ResultRequest)
+	in := new(Request)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -129,13 +171,13 @@ func _Auction_Result_Handler(srv interface{}, ctx context.Context, dec func(inte
 		FullMethod: "/auction.Auction/result",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AuctionServer).Result(ctx, req.(*ResultRequest))
+		return srv.(AuctionServer).Result(ctx, req.(*Request))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
 func _Auction_Reset_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ResetRequest)
+	in := new(Request)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -147,7 +189,61 @@ func _Auction_Reset_Handler(srv interface{}, ctx context.Context, dec func(inter
 		FullMethod: "/auction.Auction/reset",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AuctionServer).Reset(ctx, req.(*ResetRequest))
+		return srv.(AuctionServer).Reset(ctx, req.(*Request))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Auction_ServerBid_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(BidRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuctionServer).ServerBid(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/auction.Auction/serverBid",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuctionServer).ServerBid(ctx, req.(*BidRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Auction_ServerResult_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Request)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuctionServer).ServerResult(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/auction.Auction/serverResult",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuctionServer).ServerResult(ctx, req.(*Request))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Auction_ServerReset_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Request)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuctionServer).ServerReset(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/auction.Auction/ServerReset",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuctionServer).ServerReset(ctx, req.(*Request))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -170,6 +266,18 @@ var Auction_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "reset",
 			Handler:    _Auction_Reset_Handler,
+		},
+		{
+			MethodName: "serverBid",
+			Handler:    _Auction_ServerBid_Handler,
+		},
+		{
+			MethodName: "serverResult",
+			Handler:    _Auction_ServerResult_Handler,
+		},
+		{
+			MethodName: "ServerReset",
+			Handler:    _Auction_ServerReset_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
