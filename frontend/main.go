@@ -25,7 +25,7 @@ var ownPort int
 func main() {
 	ownPort, _ := strconv.Atoi(os.Args[1])
 
-	file, _ := openLogFile("./frontend/frontendlog.log")
+	file, _ := openLogFile("./logs/frontendlog.log")
 
 	mw := io.MultiWriter(os.Stdout, file)
 	log.SetOutput(mw)
@@ -52,7 +52,7 @@ func main() {
 		id: int32(ownPort),
 	})
 
-	log.Printf("front end listening at %v", listen.Addr())
+	log.Printf("Front end listening at %v", listen.Addr())
 
 	grpcServer.Serve(listen)
 
@@ -65,7 +65,7 @@ func (fe *FrontEnd) Bid(ctx context.Context, req *auction.BidRequest) (*auction.
 	for _, server := range servers {
 		res, err := server.ServerBid(ctx, req)
 		if err != nil {
-			log.Printf("Front end %v: ERROR - %v", ownPort, err)
+			log.Printf("Front end %v: ERROR - %v", fe.id, err)
 			continue
 		}
 		w++
@@ -94,7 +94,7 @@ func (fe *FrontEnd) Result(ctx context.Context, req *auction.Request) (*auction.
 	for _, server := range servers {
 		res, err := server.ServerResult(ctx, req)
 		if err != nil {
-			log.Printf("front end %v: ERROR - %v", fe.id, err)
+			log.Printf("Front end %v: ERROR - %v", fe.id, err)
 			continue
 		}
 		r++
@@ -136,7 +136,7 @@ func (fe *FrontEnd) Reset(ctx context.Context, req *auction.Request) (*auction.C
 	for _, server := range servers {
 		_, err := server.ServerReset(ctx, req)
 		if err != nil {
-			log.Printf("front end %v: ERROR - %v", fe.id, err)
+			log.Printf("Front end %v: ERROR - %v", fe.id, err)
 			continue
 		}
 		w++

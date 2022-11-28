@@ -20,7 +20,7 @@ func main() {
 	i, _ := strconv.Atoi(os.Args[2])
 	fePort := int32(i)
 
-	file, _ := openLogFile("./client/clientlog.log")
+	file, _ := openLogFile("./logs/clientlog.log")
 
 	mw := io.MultiWriter(os.Stdout, file)
 	log.SetOutput(mw)

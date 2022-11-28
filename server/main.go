@@ -14,7 +14,7 @@ import (
 )
 
 func main() {
-	file, _ := openLogFile("./server/serverlog.log")
+	file, _ := openLogFile("./logs/serverlog.log")
 
 	mw := io.MultiWriter(os.Stdout, file)
 	log.SetOutput(mw)
