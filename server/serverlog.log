@@ -58,3 +58,78 @@
 2022/11/28 11:21:53 server listening at 127.0.0.1:3000
 2022/11/28 11:21:55 server listening at 127.0.0.1:3001
 2022/11/28 11:21:56 server listening at 127.0.0.1:3002
+2022/11/28 11:32:38 server listening at 127.0.0.1:3000
+2022/11/28 11:32:46 server listening at 127.0.0.1:3001
+2022/11/28 11:32:54 server listening at 127.0.0.1:3002
+2022/11/28 11:45:41 server listening at 127.0.0.1:3000
+2022/11/28 11:45:43 server listening at 127.0.0.1:3001
+2022/11/28 11:45:44 server listening at 127.0.0.1:3002
+2022/11/28 11:48:44 server 0: recieved a bid from Foo. Amount: 100
+2022/11/28 11:48:44 server 0: started a new auction
+2022/11/28 11:48:44 server 1: recieved a bid from Foo. Amount: 100
+2022/11/28 11:48:44 server 1: started a new auction
+2022/11/28 11:48:44 server 2: recieved a bid from Foo. Amount: 100
+2022/11/28 11:48:44 server 2: started a new auction
+2022/11/28 11:48:53 time left of auction at server 0: 50 seconds
+2022/11/28 11:48:53 time left of auction at server 1: 50 seconds
+2022/11/28 11:48:53 time left of auction at server 2: 50 seconds
+2022/11/28 11:49:03 time left of auction at server 1: 40 seconds
+2022/11/28 11:49:03 time left of auction at server 0: 40 seconds
+2022/11/28 11:49:03 time left of auction at server 2: 40 seconds
+2022/11/28 11:49:13 time left of auction at server 0: 30 seconds
+2022/11/28 11:49:13 time left of auction at server 1: 30 seconds
+2022/11/28 11:49:13 time left of auction at server 2: 30 seconds
+2022/11/28 11:49:23 time left of auction at server 0: 20 seconds
+2022/11/28 11:49:23 time left of auction at server 1: 20 seconds
+2022/11/28 11:49:23 time left of auction at server 2: 20 seconds
+2022/11/28 11:49:33 time left of auction at server 0: 10 seconds
+2022/11/28 11:49:33 time left of auction at server 1: 10 seconds
+2022/11/28 11:49:33 time left of auction at server 2: 10 seconds
+2022/11/28 11:49:43 time left of auction at server 0: 0 seconds
+2022/11/28 11:49:43 time left of auction at server 1: 0 seconds
+2022/11/28 11:49:43 time left of auction at server 2: 0 seconds
+2022/11/28 11:52:43 server 0: recieved a bid from Foo. Amount: 100
+2022/11/28 11:52:43 server 1: recieved a bid from Foo. Amount: 100
+2022/11/28 11:52:43 server 2: recieved a bid from Foo. Amount: 100
+2022/11/28 11:54:25 server 0: resetted the auction
+2022/11/28 11:54:25 server 1: resetted the auction
+2022/11/28 11:54:25 server 2: resetted the auction
+2022/11/28 11:54:29 server 0: recieved a bid from Foo. Amount: 100
+2022/11/28 11:54:29 server 0: started a new auction
+2022/11/28 11:54:29 server 1: recieved a bid from Foo. Amount: 100
+2022/11/28 11:54:29 server 1: started a new auction
+2022/11/28 11:54:29 server 2: recieved a bid from Foo. Amount: 100
+2022/11/28 11:54:29 server 2: started a new auction
+2022/11/28 11:54:38 server 0: recieved a bid from Foo. Amount: 100
+2022/11/28 11:54:38 server 1: recieved a bid from Foo. Amount: 100
+2022/11/28 11:54:38 server 2: recieved a bid from Foo. Amount: 100
+2022/11/28 11:54:38 time left of auction at server 0: 50 seconds
+2022/11/28 11:54:38 time left of auction at server 1: 50 seconds
+2022/11/28 11:54:38 time left of auction at server 2: 50 seconds
+2022/11/28 11:54:48 time left of auction at server 0: 40 seconds
+2022/11/28 11:54:48 time left of auction at server 1: 40 seconds
+2022/11/28 11:54:48 time left of auction at server 2: 40 seconds
+2022/11/28 11:54:58 time left of auction at server 1: 30 seconds
+2022/11/28 11:54:58 time left of auction at server 0: 30 seconds
+2022/11/28 11:54:58 time left of auction at server 2: 30 seconds
+2022/11/28 11:55:13 server listening at 127.0.0.1:3000
+2022/11/28 11:55:22 server listening at 127.0.0.1:3001
+2022/11/28 11:55:31 server listening at 127.0.0.1:3002
+2022/11/28 11:55:47 server 0: recieved a bid from Foo. Amount: 100
+2022/11/28 11:55:47 server 0: started a new auction
+2022/11/28 11:55:47 server 1: recieved a bid from Foo. Amount: 100
+2022/11/28 11:55:47 server 1: started a new auction
+2022/11/28 11:55:47 server 2: recieved a bid from Foo. Amount: 100
+2022/11/28 11:55:47 server 2: started a new auction
+2022/11/28 11:55:53 server 0: resetted the auction
+2022/11/28 11:55:53 server 1: resetted the auction
+2022/11/28 11:55:53 server 2: resetted the auction
+2022/11/28 11:55:57 server 0: recieved a bid from Foo. Amount: 100
+2022/11/28 11:55:57 server 0: started a new auction
+2022/11/28 11:55:57 server 1: recieved a bid from Foo. Amount: 100
+2022/11/28 11:55:57 server 1: started a new auction
+2022/11/28 11:55:57 server 2: recieved a bid from Foo. Amount: 100
+2022/11/28 11:55:57 server 2: started a new auction
+2022/11/28 11:56:00 server 0: resetted the auction
+2022/11/28 11:56:00 server 1: resetted the auction
+2022/11/28 11:56:00 server 2: resetted the auction

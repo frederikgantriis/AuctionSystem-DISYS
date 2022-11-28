@@ -79,6 +79,11 @@ func (s *Server) ServerResult(ctx context.Context, resReq *auction.Request) (*au
 }
 
 func (s *Server) ServerReset(ctx context.Context, resReq *auction.Request) (*auction.OutcomeReply, error) {
+	// Don't reset if auction isn't over
+	if s.timeLeft > 0 {
+		return &auction.OutcomeReply{Outcome: auction.Outcomes_FAIL}, nil
+	}
+
 	// timeLeft == -1 means that a new auction will be started when a bid is made
 	s.timeLeft = -1
 	log.Printf("server %v: resetted the auction", s.id)

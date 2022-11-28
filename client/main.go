@@ -18,7 +18,7 @@ import (
 func main() {
 	username := os.Args[1]
 	i, _ := strconv.Atoi(os.Args[2])
-	port := int32(i)
+	fePort := int32(i)
 
 	file, _ := openLogFile("./client/clientlog.log")
 
@@ -30,13 +30,15 @@ func main() {
 	defer cancel()
 
 	// Connection to front end
-	fmt.Printf("Trying to dial: %v\n", port)
-	conn, err := grpc.Dial(fmt.Sprintf(":%v", port), grpc.WithTransportCredentials(insecure.NewCredentials()), grpc.WithBlock())
+	fmt.Printf("Trying to dial: %v\n", fePort)
+	conn, err := grpc.Dial(fmt.Sprintf(":%v", fePort), grpc.WithTransportCredentials(insecure.NewCredentials()), grpc.WithBlock())
 	if err != nil {
 		log.Fatalf("User %v: Could not connect: %s", username, err)
 	}
 	fe := auction.NewAuctionClient(conn)
 	defer conn.Close()
+
+	log.Printf("User %v: Connected to front end %v", username, fePort)
 
 	scanner := bufio.NewScanner(os.Stdin)
 	for scanner.Scan() {
@@ -52,7 +54,7 @@ func main() {
 				log.Printf("ERROR: %v", err)
 				continue
 			}
-			log.Printf("user %v: %v", username, res.Message)
+			log.Printf("User %v: %v", username, res.Message)
 		} else if command[0] == "result" {
 			res, err := fe.Result(ctx, &auction.Request{})
 			if err != nil {
@@ -60,14 +62,14 @@ func main() {
 				continue
 			}
 
-			log.Printf("user %v: %v", username, res.Message)
+			log.Printf("User %v: %v", username, res.Message)
 		} else if command[0] == "reset" {
 			res, err := fe.Reset(ctx, &auction.Request{})
 			if err != nil {
 				log.Printf("ERROR: %v", err)
 				continue
 			}
-			log.Printf("user %v: %v", username, res.Message)
+			log.Printf("User %v: %v", username, res.Message)
 		}
 	}
 }

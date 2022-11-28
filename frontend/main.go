@@ -31,17 +31,6 @@ func main() {
 	log.SetOutput(mw)
 	log.SetFlags(2 | 3)
 
-	listen, _ := net.Listen("tcp", "localhost:"+fmt.Sprint(ownPort))
-
-	grpcServer := grpc.NewServer()
-	auction.RegisterAuctionServer(grpcServer, &FrontEnd{
-		id: int32(ownPort),
-	})
-
-	log.Printf("front end listening at %v", listen.Addr())
-
-	grpcServer.Serve(listen)
-
 	servers = make([]auction.AuctionClient, 3)
 
 	for i := 0; i < 3; i++ {
@@ -55,6 +44,19 @@ func main() {
 		servers[i] = auction.NewAuctionClient(conn)
 		defer conn.Close()
 	}
+
+	listen, _ := net.Listen("tcp", "localhost:"+fmt.Sprint(ownPort))
+
+	grpcServer := grpc.NewServer()
+	auction.RegisterAuctionServer(grpcServer, &FrontEnd{
+		id: int32(ownPort),
+	})
+
+	log.Printf("front end listening at %v", listen.Addr())
+
+	grpcServer.Serve(listen)
+
+	log.Printf("Front end served")
 }
 
 func (fe *FrontEnd) Bid(ctx context.Context, req *auction.BidRequest) (*auction.ClientReply, error) {
@@ -63,7 +65,7 @@ func (fe *FrontEnd) Bid(ctx context.Context, req *auction.BidRequest) (*auction.
 	for _, server := range servers {
 		res, err := server.ServerBid(ctx, req)
 		if err != nil {
-			log.Printf("front end %v: ERROR - %v", ownPort, err)
+			log.Printf("Front end %v: ERROR - %v", ownPort, err)
 			continue
 		}
 		w++
@@ -78,10 +80,10 @@ func (fe *FrontEnd) Bid(ctx context.Context, req *auction.BidRequest) (*auction.
 		if reply.GetOutcome() == auction.Outcomes_SUCCESS {
 			message = fmt.Sprintf("Made a succesfull bid, for amount: %v", req.GetBid())
 		} else if reply.GetOutcome() == auction.Outcomes_FAIL {
-			message = fmt.Sprintf("Bid was either too low or auction has ended")
+			message = "Bid was either too low or auction has ended"
 		}
 	} else {
-		message = fmt.Sprintf("Call successful server writes and delete write (not implemented")
+		message = fmt.Sprintf("Call successful server writes and delete write (not implemented), Wrote to %v servers", w)
 	}
 	return &auction.ClientReply{Message: message}, nil
 }
@@ -131,9 +133,9 @@ func (fe *FrontEnd) Result(ctx context.Context, req *auction.Request) (*auction.
 func (fe *FrontEnd) Reset(ctx context.Context, req *auction.Request) (*auction.ClientReply, error) {
 	w := 0
 	for _, server := range servers {
-		_, err := server.Reset(ctx, req)
+		_, err := server.ServerReset(ctx, req)
 		if err != nil {
-			log.Printf("front end %v: ERROR - %v", ownPort, err)
+			log.Printf("front end %v: ERROR - %v", fe.id, err)
 			continue
 		}
 		w++

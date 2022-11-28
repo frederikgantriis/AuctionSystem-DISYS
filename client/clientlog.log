@@ -51,3 +51,32 @@
 2022/11/25 10:01:46 user Silas: made a succesfull bid, for amount: 200
 2022/11/28 11:22:06 user silas: Call successful server writes and delete write (not implemented
 2022/11/28 11:22:19 user silas: Call successful server writes and delete write (not implemented
+2022/11/28 11:33:46 user Foo: Call successful server writes and delete write (not implemented
+2022/11/28 11:34:50 user Foo: Call successful server writes and delete write (not implemented), Wrote to 0 servers
+2022/11/28 11:36:38 user Foo: Call successful server writes and delete write (not implemented), Wrote to 0 servers
+2022/11/28 11:43:37 user Foo: Call successful server writes and delete write (not implemented), Wrote to 0 servers
+2022/11/28 11:45:18 User Foo: Connected to front end 5000
+2022/11/28 11:45:51 User Foo: Connected to front end 5000
+2022/11/28 11:46:19 User Foo: Connected to front end 5000
+2022/11/28 11:48:38 User Foo: Connected to front end 5000
+2022/11/28 11:48:44 user Foo: Made a succesfull bid, for amount: 100
+2022/11/28 11:48:50 user Foo: Current highest bid: 100 by Foo
+ The auction ends in: 53 seconds
+2022/11/28 11:48:54 user Foo: Couldn't write to enough server to complete a reset
+2022/11/28 11:51:15 User Foo: Connected to front end 5000
+2022/11/28 11:51:18 user Foo: Couldn't write to enough server to complete a reset
+2022/11/28 11:52:39 User Foo: Connected to front end 5000
+2022/11/28 11:52:43 user Foo: Bid was either too low or auction has ended
+2022/11/28 11:54:21 user Foo: The auction has ended. The winner was Foo with the bid: 100
+2022/11/28 11:54:25 user Foo: Reset successfull
+2022/11/28 11:54:29 user Foo: Made a succesfull bid, for amount: 100
+2022/11/28 11:54:35 User Foo: Connected to front end 5000
+2022/11/28 11:54:38 user Foo: Bid was either too low or auction has ended
+2022/11/28 11:54:58 User Foo: Connected to front end 5000
+2022/11/28 11:55:38 User Foo: Connected to front end 5000
+2022/11/28 11:55:47 user Foo: Made a succesfull bid, for amount: 100
+2022/11/28 11:55:51 user Foo: Current highest bid: 100 by Foo
+ The auction ends in: 55 seconds
+2022/11/28 11:55:53 user Foo: Reset successfull
+2022/11/28 11:55:57 user Foo: Made a succesfull bid, for amount: 100
+2022/11/28 11:56:00 user Foo: Reset successfull
