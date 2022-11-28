@@ -94,7 +94,7 @@ func (fe *FrontEnd) Result(ctx context.Context, req *auction.Request) (*auction.
 	for _, server := range servers {
 		res, err := server.ServerResult(ctx, req)
 		if err != nil {
-			log.Printf("front end %v: ERROR - %v", ownPort, err)
+			log.Printf("front end %v: ERROR - %v", fe.id, err)
 			continue
 		}
 		r++
