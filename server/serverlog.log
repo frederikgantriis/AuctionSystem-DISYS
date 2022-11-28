@@ -52,3 +52,9 @@
 2022/11/25 10:01:46 server 2: recieved a bid from Silas. Amount: 200
 2022/11/25 10:01:51 time left of auction at server 0: 50 seconds
 2022/11/25 10:01:51 time left of auction at server 2: 50 seconds
+2022/11/28 11:20:13 server listening at 127.0.0.1:3000
+2022/11/28 11:20:26 server listening at 127.0.0.1:3001
+2022/11/28 11:20:35 server listening at 127.0.0.1:3002
+2022/11/28 11:21:53 server listening at 127.0.0.1:3000
+2022/11/28 11:21:55 server listening at 127.0.0.1:3001
+2022/11/28 11:21:56 server listening at 127.0.0.1:3002

@@ -43,7 +43,7 @@ func main() {
 	grpcServer.Serve(listen)
 }
 
-func (s *Server) Bid(ctx context.Context, req *auction.BidRequest) (*auction.BidReply, error) {
+func (s *Server) ServerBid(ctx context.Context, req *auction.BidRequest) (*auction.OutcomeReply, error) {
 	// if a bid is made when timeLeft is -1, a new auction starts
 	log.Printf("server %v: recieved a bid from %v. Amount: %v", s.id, req.GetUser(), req.GetBid())
 	if s.timeLeft == -1 {
@@ -68,21 +68,21 @@ func (s *Server) Bid(ctx context.Context, req *auction.BidRequest) (*auction.Bid
 	if (req.Bid > s.highestBid) && (s.timeLeft > 0) {
 		s.highestBid = req.Bid
 		s.currentWinnerUser = req.User
-		return &auction.BidReply{Outcome: auction.Outcomes(SUCCESS)}, nil
+		return &auction.OutcomeReply{Outcome: auction.Outcomes(SUCCESS)}, nil
 	} else {
-		return &auction.BidReply{Outcome: auction.Outcomes(FAIL)}, nil
+		return &auction.OutcomeReply{Outcome: auction.Outcomes(FAIL)}, nil
 	}
 }
 
-func (s *Server) Result(ctx context.Context, resReq *auction.ResultRequest) (*auction.ResultReply, error) {
+func (s *Server) ServerResult(ctx context.Context, resReq *auction.Request) (*auction.ResultReply, error) {
 	return &auction.ResultReply{User: s.currentWinnerUser, HighestBid: s.highestBid, TimeLeft: s.timeLeft}, nil
 }
 
-func (s *Server) Reset(ctx context.Context, resReq *auction.ResetRequest) (*auction.ResetReply, error) {
+func (s *Server) ServerReset(ctx context.Context, resReq *auction.Request) (*auction.OutcomeReply, error) {
 	// timeLeft == -1 means that a new auction will be started when a bid is made
 	s.timeLeft = -1
 	log.Printf("server %v: resetted the auction", s.id)
-	return &auction.ResetReply{}, nil
+	return &auction.OutcomeReply{}, nil
 }
 
 func openLogFile(path string) (*os.File, error) {
