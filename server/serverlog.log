@@ -1,135 +1,41 @@
-2022/11/25 09:59:45 server listening at 127.0.0.1:3000
-2022/11/25 09:59:47 server listening at 127.0.0.1:3001
-2022/11/25 09:59:49 server listening at 127.0.0.1:3002
-2022/11/25 10:00:24 server 0: recieved a bid from Marcus. Amount: 100
-2022/11/25 10:00:24 server 0: started a new auction
-2022/11/25 10:00:24 server 1: recieved a bid from Marcus. Amount: 100
-2022/11/25 10:00:24 server 1: started a new auction
-2022/11/25 10:00:24 server 2: recieved a bid from Marcus. Amount: 100
-2022/11/25 10:00:24 server 2: started a new auction
-2022/11/25 10:00:27 server 0: recieved a bid from Silas. Amount: 200
-2022/11/25 10:00:27 server 1: recieved a bid from Silas. Amount: 200
-2022/11/25 10:00:27 server 2: recieved a bid from Silas. Amount: 200
-2022/11/25 10:00:31 server 0: recieved a bid from Marcus. Amount: 150
-2022/11/25 10:00:31 server 1: recieved a bid from Marcus. Amount: 150
-2022/11/25 10:00:31 server 2: recieved a bid from Marcus. Amount: 150
-2022/11/25 10:00:33 time left of auction at server 0: 50 seconds
-2022/11/25 10:00:33 time left of auction at server 1: 50 seconds
-2022/11/25 10:00:33 time left of auction at server 2: 50 seconds
-2022/11/25 10:00:35 server 0: recieved a bid from Marcus. Amount: 300
-2022/11/25 10:00:35 server 1: recieved a bid from Marcus. Amount: 300
-2022/11/25 10:00:35 server 2: recieved a bid from Marcus. Amount: 300
-2022/11/25 10:00:39 server 0: recieved a bid from Silas. Amount: 450
-2022/11/25 10:00:39 server 1: recieved a bid from Silas. Amount: 450
-2022/11/25 10:00:39 server 2: recieved a bid from Silas. Amount: 450
-2022/11/25 10:00:42 server 0: recieved a bid from Marcus. Amount: 400
-2022/11/25 10:00:42 server 1: recieved a bid from Marcus. Amount: 400
-2022/11/25 10:00:42 server 2: recieved a bid from Marcus. Amount: 400
-2022/11/25 10:00:43 time left of auction at server 0: 40 seconds
-2022/11/25 10:00:43 time left of auction at server 1: 40 seconds
-2022/11/25 10:00:43 time left of auction at server 2: 40 seconds
-2022/11/25 10:00:46 server 0: recieved a bid from Silas. Amount: 400
-2022/11/25 10:00:46 server 1: recieved a bid from Silas. Amount: 400
-2022/11/25 10:00:46 server 2: recieved a bid from Silas. Amount: 400
-2022/11/25 10:00:53 time left of auction at server 0: 30 seconds
-2022/11/25 10:00:53 time left of auction at server 1: 30 seconds
-2022/11/25 10:00:53 time left of auction at server 2: 30 seconds
-2022/11/25 10:01:03 time left of auction at server 0: 20 seconds
-2022/11/25 10:01:03 time left of auction at server 2: 20 seconds
-2022/11/25 10:01:10 server 0: recieved a bid from Marcus. Amount: 500
-2022/11/25 10:01:10 server 2: recieved a bid from Marcus. Amount: 500
-2022/11/25 10:01:13 time left of auction at server 0: 10 seconds
-2022/11/25 10:01:13 time left of auction at server 2: 10 seconds
-2022/11/25 10:01:23 time left of auction at server 0: 0 seconds
-2022/11/25 10:01:23 time left of auction at server 2: 0 seconds
-2022/11/25 10:01:35 server 0: resetted the auction
-2022/11/25 10:01:35 server 2: resetted the auction
-2022/11/25 10:01:42 server 0: recieved a bid from Marcus. Amount: 100
-2022/11/25 10:01:42 server 0: started a new auction
-2022/11/25 10:01:42 server 2: recieved a bid from Marcus. Amount: 100
-2022/11/25 10:01:42 server 2: started a new auction
-2022/11/25 10:01:46 server 0: recieved a bid from Silas. Amount: 200
-2022/11/25 10:01:46 server 2: recieved a bid from Silas. Amount: 200
-2022/11/25 10:01:51 time left of auction at server 0: 50 seconds
-2022/11/25 10:01:51 time left of auction at server 2: 50 seconds
-2022/11/28 11:20:13 server listening at 127.0.0.1:3000
-2022/11/28 11:20:26 server listening at 127.0.0.1:3001
-2022/11/28 11:20:35 server listening at 127.0.0.1:3002
-2022/11/28 11:21:53 server listening at 127.0.0.1:3000
-2022/11/28 11:21:55 server listening at 127.0.0.1:3001
-2022/11/28 11:21:56 server listening at 127.0.0.1:3002
-2022/11/28 11:32:38 server listening at 127.0.0.1:3000
-2022/11/28 11:32:46 server listening at 127.0.0.1:3001
-2022/11/28 11:32:54 server listening at 127.0.0.1:3002
-2022/11/28 11:45:41 server listening at 127.0.0.1:3000
-2022/11/28 11:45:43 server listening at 127.0.0.1:3001
-2022/11/28 11:45:44 server listening at 127.0.0.1:3002
-2022/11/28 11:48:44 server 0: recieved a bid from Foo. Amount: 100
-2022/11/28 11:48:44 server 0: started a new auction
-2022/11/28 11:48:44 server 1: recieved a bid from Foo. Amount: 100
-2022/11/28 11:48:44 server 1: started a new auction
-2022/11/28 11:48:44 server 2: recieved a bid from Foo. Amount: 100
-2022/11/28 11:48:44 server 2: started a new auction
-2022/11/28 11:48:53 time left of auction at server 0: 50 seconds
-2022/11/28 11:48:53 time left of auction at server 1: 50 seconds
-2022/11/28 11:48:53 time left of auction at server 2: 50 seconds
-2022/11/28 11:49:03 time left of auction at server 1: 40 seconds
-2022/11/28 11:49:03 time left of auction at server 0: 40 seconds
-2022/11/28 11:49:03 time left of auction at server 2: 40 seconds
-2022/11/28 11:49:13 time left of auction at server 0: 30 seconds
-2022/11/28 11:49:13 time left of auction at server 1: 30 seconds
-2022/11/28 11:49:13 time left of auction at server 2: 30 seconds
-2022/11/28 11:49:23 time left of auction at server 0: 20 seconds
-2022/11/28 11:49:23 time left of auction at server 1: 20 seconds
-2022/11/28 11:49:23 time left of auction at server 2: 20 seconds
-2022/11/28 11:49:33 time left of auction at server 0: 10 seconds
-2022/11/28 11:49:33 time left of auction at server 1: 10 seconds
-2022/11/28 11:49:33 time left of auction at server 2: 10 seconds
-2022/11/28 11:49:43 time left of auction at server 0: 0 seconds
-2022/11/28 11:49:43 time left of auction at server 1: 0 seconds
-2022/11/28 11:49:43 time left of auction at server 2: 0 seconds
-2022/11/28 11:52:43 server 0: recieved a bid from Foo. Amount: 100
-2022/11/28 11:52:43 server 1: recieved a bid from Foo. Amount: 100
-2022/11/28 11:52:43 server 2: recieved a bid from Foo. Amount: 100
-2022/11/28 11:54:25 server 0: resetted the auction
-2022/11/28 11:54:25 server 1: resetted the auction
-2022/11/28 11:54:25 server 2: resetted the auction
-2022/11/28 11:54:29 server 0: recieved a bid from Foo. Amount: 100
-2022/11/28 11:54:29 server 0: started a new auction
-2022/11/28 11:54:29 server 1: recieved a bid from Foo. Amount: 100
-2022/11/28 11:54:29 server 1: started a new auction
-2022/11/28 11:54:29 server 2: recieved a bid from Foo. Amount: 100
-2022/11/28 11:54:29 server 2: started a new auction
-2022/11/28 11:54:38 server 0: recieved a bid from Foo. Amount: 100
-2022/11/28 11:54:38 server 1: recieved a bid from Foo. Amount: 100
-2022/11/28 11:54:38 server 2: recieved a bid from Foo. Amount: 100
-2022/11/28 11:54:38 time left of auction at server 0: 50 seconds
-2022/11/28 11:54:38 time left of auction at server 1: 50 seconds
-2022/11/28 11:54:38 time left of auction at server 2: 50 seconds
-2022/11/28 11:54:48 time left of auction at server 0: 40 seconds
-2022/11/28 11:54:48 time left of auction at server 1: 40 seconds
-2022/11/28 11:54:48 time left of auction at server 2: 40 seconds
-2022/11/28 11:54:58 time left of auction at server 1: 30 seconds
-2022/11/28 11:54:58 time left of auction at server 0: 30 seconds
-2022/11/28 11:54:58 time left of auction at server 2: 30 seconds
-2022/11/28 11:55:13 server listening at 127.0.0.1:3000
-2022/11/28 11:55:22 server listening at 127.0.0.1:3001
-2022/11/28 11:55:31 server listening at 127.0.0.1:3002
-2022/11/28 11:55:47 server 0: recieved a bid from Foo. Amount: 100
-2022/11/28 11:55:47 server 0: started a new auction
-2022/11/28 11:55:47 server 1: recieved a bid from Foo. Amount: 100
-2022/11/28 11:55:47 server 1: started a new auction
-2022/11/28 11:55:47 server 2: recieved a bid from Foo. Amount: 100
-2022/11/28 11:55:47 server 2: started a new auction
-2022/11/28 11:55:53 server 0: resetted the auction
-2022/11/28 11:55:53 server 1: resetted the auction
-2022/11/28 11:55:53 server 2: resetted the auction
-2022/11/28 11:55:57 server 0: recieved a bid from Foo. Amount: 100
-2022/11/28 11:55:57 server 0: started a new auction
-2022/11/28 11:55:57 server 1: recieved a bid from Foo. Amount: 100
-2022/11/28 11:55:57 server 1: started a new auction
-2022/11/28 11:55:57 server 2: recieved a bid from Foo. Amount: 100
-2022/11/28 11:55:57 server 2: started a new auction
-2022/11/28 11:56:00 server 0: resetted the auction
-2022/11/28 11:56:00 server 1: resetted the auction
-2022/11/28 11:56:00 server 2: resetted the auction
+2022/11/28 15:09:31 server listening at 127.0.0.1:3000
+2022/11/28 15:09:32 server listening at 127.0.0.1:3001
+2022/11/28 15:09:35 server listening at 127.0.0.1:3002
+2022/11/28 15:09:49 server 0: recieved a bid from silas. Amount: 100
+2022/11/28 15:09:49 server 0: started a new auction
+2022/11/28 15:09:49 server 1: recieved a bid from silas. Amount: 100
+2022/11/28 15:09:49 server 1: started a new auction
+2022/11/28 15:09:49 server 2: recieved a bid from silas. Amount: 100
+2022/11/28 15:09:49 server 2: started a new auction
+2022/11/28 15:09:55 server 0: recieved a bid from farcus. Amount: 50
+2022/11/28 15:09:55 server 1: recieved a bid from farcus. Amount: 50
+2022/11/28 15:09:55 server 2: recieved a bid from farcus. Amount: 50
+2022/11/28 15:09:57 server 0: recieved a bid from farcus. Amount: 100
+2022/11/28 15:09:57 server 1: recieved a bid from farcus. Amount: 100
+2022/11/28 15:09:57 server 2: recieved a bid from farcus. Amount: 100
+2022/11/28 15:09:58 time left of auction at server 0: 50 seconds
+2022/11/28 15:09:58 time left of auction at server 1: 50 seconds
+2022/11/28 15:09:58 time left of auction at server 2: 50 seconds
+2022/11/28 15:10:00 server 0: recieved a bid from farcus. Amount: 150
+2022/11/28 15:10:00 server 1: recieved a bid from farcus. Amount: 150
+2022/11/28 15:10:00 server 2: recieved a bid from farcus. Amount: 150
+2022/11/28 15:10:09 time left of auction at server 1: 40 seconds
+2022/11/28 15:10:09 time left of auction at server 0: 40 seconds
+2022/11/28 15:10:15 server 0: recieved a bid from silas. Amount: 200
+2022/11/28 15:10:15 server 1: recieved a bid from silas. Amount: 200
+2022/11/28 15:10:19 time left of auction at server 1: 30 seconds
+2022/11/28 15:10:19 time left of auction at server 0: 30 seconds
+2022/11/28 15:10:25 server 0: recieved a bid from farcus. Amount: 250
+2022/11/28 15:10:25 server 1: recieved a bid from farcus. Amount: 250
+2022/11/28 15:10:29 time left of auction at server 1: 20 seconds
+2022/11/28 15:10:29 time left of auction at server 0: 20 seconds
+2022/11/28 15:10:35 server 0: recieved a bid from silas. Amount: 300
+2022/11/28 15:10:35 server 1: recieved a bid from silas. Amount: 300
+2022/11/28 15:10:39 time left of auction at server 0: 10 seconds
+2022/11/28 15:10:39 time left of auction at server 1: 10 seconds
+2022/11/28 15:10:40 server 0: recieved a bid from farcus. Amount: 275
+2022/11/28 15:10:40 server 1: recieved a bid from farcus. Amount: 275
+2022/11/28 15:10:43 server 0: recieved a bid from farcus. Amount: 350
+2022/11/28 15:10:43 server 1: recieved a bid from farcus. Amount: 350
+2022/11/28 15:10:49 time left of auction at server 0: 0 seconds
+2022/11/28 15:10:49 time left of auction at server 1: 0 seconds
