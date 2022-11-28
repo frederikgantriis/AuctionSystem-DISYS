@@ -21,7 +21,8 @@ func main() {
 	log.SetFlags(2 | 3)
 
 	if len(os.Args) != 2 {
-		log.Printf("Please input a number to run the server on")
+		log.Printf("Please input a number to run the server on. Fx. inputting 3 would run the server on port 3003")
+		return
 	}
 
 	ownId := os.Args[1]

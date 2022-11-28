@@ -33,7 +33,7 @@ func main() {
 	fmt.Printf("Trying to dial: %v\n", fePort)
 	conn, err := grpc.Dial(fmt.Sprintf(":%v", fePort), grpc.WithTransportCredentials(insecure.NewCredentials()), grpc.WithBlock())
 	if err != nil {
-		log.Fatalf("User %v: Could not connect: %s", username, err)
+		log.Fatalf("User %v: Could not connect. Error: %s", username, err)
 	}
 	fe := auction.NewAuctionClient(conn)
 	defer conn.Close()
@@ -54,7 +54,7 @@ func main() {
 				log.Printf("ERROR: %v", err)
 				continue
 			}
-			log.Printf("User %v: %v", username, res.Message)
+			fmt.Printf("User %v: %v", username, res.Message)
 		} else if command[0] == "result" {
 			res, err := fe.Result(ctx, &auction.Request{})
 			if err != nil {
@@ -62,14 +62,14 @@ func main() {
 				continue
 			}
 
-			log.Printf("User %v: %v", username, res.Message)
+			fmt.Printf("User %v: %v", username, res.Message)
 		} else if command[0] == "reset" {
 			res, err := fe.Reset(ctx, &auction.Request{})
 			if err != nil {
 				log.Printf("ERROR: %v", err)
 				continue
 			}
-			log.Printf("User %v: %v", username, res.Message)
+			fmt.Printf("User %v: %v", username, res.Message)
 		}
 	}
 }

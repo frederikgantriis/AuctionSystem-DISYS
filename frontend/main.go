@@ -125,7 +125,8 @@ func (fe *FrontEnd) Result(ctx context.Context, req *auction.Request) (*auction.
 			message = fmt.Sprintf("The auction has ended. The winner was %v with the bid: %v", reply.GetUser(), reply.GetHighestBid())
 		}
 	} else {
-		message = fmt.Sprintf("Didn't receive enough answers to get a usefull result")
+		log.Printf("Front end %v: only %v answers was received from the servers and therefore couldn't produce a result for the client", fe.id, r)
+		message = "Didn't receive enough answers to get a usefull result"
 	}
 	return &auction.ClientReply{Message: message}, nil
 }
