@@ -19,7 +19,7 @@ each in a seperate terminal.
 To run a client:
 
 ```shl
-go run client/main.go [username] [prot of front end]
+go run client/main.go [username] [port of front end]
 ```
 
 With `[username]` a chosen username and `[port of front end]` the port of the front end for each client.
